@@ -1,0 +1,523 @@
+
+<!DOCTYPE html>
+<html  dir="ltr" lang="it" xml:lang="it">
+<head>
+    <title>WhoTeach Project</title>
+<link rel="icon" href="https://www.whoteach.it/lms/pluginfile.php/1/theme_adaptable/favicon/1599647241/favicon.ico" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, WhoTeach Project" />
+<link rel="stylesheet" type="text/css" href="https://www.whoteach.it/lms/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://www.whoteach.it/lms/theme/styles.php/adaptable/1599647241_1/all" />
+
+<style>
+h1 {
+    line-height: normal;
+}
+</style>
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/www.whoteach.it\/lms","sesskey":"NE9kQkfuCW","sessiontimeout":"7200","themerev":"1599647241","slasharguments":1,"theme":"adaptable","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1599646178","admin":"admin","svgicons":true,"usertimezone":"Europa\/Roma","contextid":2,"langrev":-1,"templaterev":"1599646178","developerdebug":true};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":true,"base":"https:\/\/www.whoteach.it\/lms\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/www.whoteach.it\/lms\/theme\/yui_combo.php?","combine":true,"filter":"RAW","insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/www.whoteach.it\/lms\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/www.whoteach.it\/lms\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/www.whoteach.it\/lms\/theme\/yui_combo.php?m\/1599646178\/","combine":true,"comboBase":"https:\/\/www.whoteach.it\/lms\/theme\/yui_combo.php?","ext":false,"root":"m\/1599646178\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":"DEBUG","modules":{"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-event":{"requires":["event-custom"]},"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-formatchooser":{"requires":["base","node","node-event-simulate"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_bigbluebuttonbn-broker":{"requires":["base","node","datasource-get","datasource-jsonschema","datasource-polling","moodle-core-notification"]},"moodle-mod_bigbluebuttonbn-imports":{"requires":["base","node"]},"moodle-mod_bigbluebuttonbn-modform":{"requires":["base","node"]},"moodle-mod_bigbluebuttonbn-recordings":{"requires":["base","node","datasource-get","datasource-jsonschema","datasource-polling","moodle-core-notification"]},"moodle-mod_bigbluebuttonbn-rooms":{"requires":["base","node","datasource-get","datasource-jsonschema","datasource-polling","moodle-core-notification"]},"moodle-mod_customcert-rearrange":{"requires":["dd-delegate","dd-drag"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_grader-gradereporttable":{"requires":["base","node","event","handlebars","overlay","event-hover"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/www.whoteach.it\/lms\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/www.whoteach.it\/lms\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1599646178\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/www.whoteach.it\/lms\/lib\/javascript.php\/1599646178\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/www.whoteach.it\/lms\/lib\/javascript.php\/1599646178\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdn.jsdelivr.net\/npm\/mathjax@2.7.8\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<script>
+window.onload = function(){
+    var tag = document.createElement("script");
+    tag.id="Cookiebot"
+    tag.src = "https://consent.cookiebot.com/uc.js";
+    tag.type = "text/javascript";
+    tag.setAttribute("data-cbid", "88875439-bde4-483f-ba72-3ed21f032283");
+    tag.setAttribute("data-blockingmode", "auto");
+    document.getElementsByTagName("head")[0].appendChild(tag);
+}
+</script>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174257305-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-174257305-1');
+</script>
+
+
+<script src="/lms/lang/translate.js"></script>
+
+    <!-- CSS print media -->
+    <link rel="stylesheet" type="text/css" href="https://www.whoteach.it/lms/theme/adaptable/style/print.css" media="print">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" value="summary">
+    <meta name="twitter:site" value="WhoTeach Project" />
+    <meta name="twitter:title" value="WhoTeach Project" />
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="WhoTeach Project" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.whoteach.it/lms" />
+    <meta name="og:site_name" value="WhoTeach Project" />
+
+    <!-- Chrome, Firefox OS and Opera on Android topbar color -->
+    <meta name="theme-color" content="#EF8D00" />
+
+    <!-- Windows Phone topbar color -->
+    <meta name="msapplication-navbutton-color" content="#EF8D00" />
+
+    <!-- iOS Safari topbar color -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#EF8D00" />
+
+        <!-- Load Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,400i'
+    rel='stylesheet'
+    type='text/css'>
+    
+            <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,400i'
+        rel='stylesheet'
+        type='text/css'>
+    
+            <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,400i'
+        rel='stylesheet'
+        type='text/css'>
+  
+</head>
+
+<body class="eupopup eupopup-bottom">
+<div id="page" class="container-fluid fullin showblockicons standard">
+
+
+
+
+    <header id="adaptable-page-header-wrapper"  >
+
+    <!--div id="above-header" class="mb-2 mb-lg-3"-->
+
+    <div id="page-header" class="container d-none d-lg-block">
+        <div class="row">
+
+        <div class="col-lg-4">
+        <div class="d-flex align-items-start bd-highlight"><div class="p-2 bd-highlight d-none d-lg-block"><a href=https://www.whoteach.it/lms aria-label="home" title="WhoTeach Project"><img src=//www.whoteach.it/lms/pluginfile.php/1/theme_adaptable/logo/1599647241/header.png id="logo" alt="" /></a></div><div id="sitetitle" class="p-2 bd-highlight d-none d-lg-block"><h1>WhoTeach Project</h1></div></div>        </div>
+
+        <div class="col-lg-8 p-0 my-auto">
+                                    <div class="socialbox pull-right d-none d-lg-block">
+                            <div class="socialbox"><a target="_blank" title="Facebook" href="https://www.facebook.com/SocialThingum"><i class="fa fa-facebook-square"></i></a></div>                        </div>
+                        
+                
+                <div id="course-header">
+                                    </div>
+
+            </div>
+            </div>
+
+    </div>
+
+
+
+
+
+<div id="nav-drawer" data-region="drawer" class="d-print-none moodle-has-zindex closed" aria-hidden="true" tabindex="-1">
+    <div id="nav-drawer-inner">
+        <nav class="list-group">
+            <ul class="list-unstyled components">
+
+                <a class="list-group-item list-group-item-action" href="https://www.whoteach.it/lms/?redirect=0"data-key="" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="1" data-nodetype="1"data-collapse="0" data-forceopen="1" data-isactive="1" data-hidden="0" data-preceedwithhr="0" data-parent-key="main-navigation-drawer"><div class="m-l-0"><i class="fa fa-home fa-lg"></i> Home</div></a></li><a class="list-group-item list-group-item-action" href="https://www.whoteach.it/lms/my/index.php"data-key="" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="1" data-nodetype="1"data-collapse="0" data-forceopen="1" data-isactive="1" data-hidden="0" data-preceedwithhr="0" data-parent-key="main-navigation-drawer"><div class="m-l-0"><i class="fa fa-dashboard fa-lg"></i>  Dashboard</div></a></li><a class="list-group-item list-group-item-action" href="https://www.whoteach.it/lms/calendar/view.php"data-key="" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="1" data-nodetype="1"data-collapse="0" data-forceopen="1" data-isactive="1" data-hidden="0" data-preceedwithhr="0" data-parent-key="main-navigation-drawer"><div class="m-l-0"><i class="fa fa-calendar fa-lg"></i> Eventi</div></a></li><a href="#main-navigation-drawer1" class="list-group-item dropdown-toggle" aria-haspopup="true" data-target="#" data-toggle="collapse" title=""><i class="fa fa-briefcase fa-lg"></i> i miei corsi</a><ul class="collapse" id="main-navigation-drawer1"><a class="list-group-item list-group-item-action" href="https://www.whoteach.it/lms/course/view.php?id=89"data-key="" data-isexpandable="0" data-indent="1" data-showdivider="0" data-type="1" data-nodetype="1"data-collapse="0" data-forceopen="1" data-isactive="1" data-hidden="0" data-preceedwithhr="0" data-parent-key="main-navigation-drawer1"><div class=" m-l-1">IoRT</div></a></li><a class="list-group-item list-group-item-action" href="https://www.whoteach.it/lms/course/view.php?id=133"data-key="" data-isexpandable="0" data-indent="1" data-showdivider="0" data-type="1" data-nodetype="1"data-collapse="0" data-forceopen="1" data-isactive="1" data-hidden="0" data-preceedwithhr="0" data-parent-key="main-navigation-drawer1"><div class=" m-l-1">CESVIP - Corso di Prova</div></a></li></ul><a class="list-group-item list-group-item-action" href="https://www.whoteach.it/lms/course/index.php"data-key="" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="1" data-nodetype="1"data-collapse="0" data-forceopen="1" data-isactive="1" data-hidden="0" data-preceedwithhr="0" data-parent-key="custom-menu-drawer"><div class="m-l-0">Corsi</div></a></li><a class="list-group-item list-group-item-action" href="https://www.whoteach.it/descriptionwt/ "target="_blank"data-key="" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="1" data-nodetype="1"data-collapse="0" data-forceopen="1" data-isactive="1" data-hidden="0" data-preceedwithhr="0" data-parent-key="custom-menu-drawer"><div class="m-l-0">Presentazione</div></a></li>
+            </ul>
+        </nav>
+
+        <nav class="list-group m-t-1">
+                        <a class="list-group-item list-group-item-action " href="https://www.whoteach.it/lms/admin/search.php">
+                <div class="m-l-0">
+                    <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-wrench fa-fw" aria-hidden="true"></i>
+                        </span>
+                        <span class="media-body ">Amministrazione del sito</span>
+                    </div>
+                </div>
+            </a>
+        </nav>
+    </div>
+</div>
+
+<div id="main-navbar" class="d-none d-lg-block">
+   
+     
+</div>
+
+
+
+			<div id="page" style= "margin:15px;" class="container">
+
+				<div id="page-content" style="padding: 5px;" class="row-fluid">
+					<section id="region-main" class="span12">
+						<span class="notifications" id="user-notifications"></span>
+						<div role="main">
+							<span id="maincontent"></span>
+							  <p class="c5"><span class="c6"><h1 class="privacy__title">NOTE LEGALI</h1></span></p>
+							  <p class="c3"><span class="c0">WHOTEACH è una piattaforma web di “Social Intelligence Learning Management System” finalizzata alla creazione di contenuti e percorsi didattici e formativi personalizzati per imprese e istituzioni formative.
+WHOTEACH ha l’obiettivo di supportare gli utilizzatori nella gestione della formazione, fornendo l’accesso a informazioni relative a corsi ed in generale a contenuti e servizi relativi al settore della formazione (in seguito “i contenuti”). Esso si definisce un learning space intelligente che, attraverso un recommender system (sistema basato su algoritmi di intelligenza artificiale) facilita i docenti nella creazione dei corsi, permettendo di risparmiare tempo e risorse. La piattaforma ha anche una componente social di “Collaborative learning”, utile per facilitare la condivisione di conoscenza e per la revisione dei contenuti dei corsi. 
+</span></p>
+<p class="c5"><span class="c6"><h3 class="privacy__subtitle">1. USO DELLA PIATTAFORMA WEB </h3></span></p>
+<p class="c3"><span class="c0"> L’accesso e/o l’uso di questo portale pone in essere la condizione di UTENTE, sia nel caso di Centro di Formazione che di Utente privato.
+L’utente, nel caso di navigazione o di utilizzo degli strumenti e dei servizi offerti da WHOTEACH, accetta tacitamente l’adempimento delle Condizioni legali del Servizio e le norme sulla Privacy.
+L’utente s’impegna a fare un uso adeguato dei contenuti e dei servizi che WHOTEACH offre attraverso il proprio sito web e, a titolo esemplificativo e non limitativo, a non impiegarli per incorrere in attività illegali o contrarie al principio della buona fede e/o all’ordine pubblico; provocare danni ai sistemi fisici e/o logici di WHOTEACH o degli Utenti; provare ad accedere e, in tal caso, utilizzare i dati delle e-mail di altri Utenti e modificare o manipolare i loro messaggi o dati di registrazione.
+Nel caso in cui l’utente debba accedere a un servizio attraverso un processo di registrazione, sarà responsabile di fornire informazioni veritiere e lecite. A seguito della registrazione, all’utente può essere fornita una password della quale sarà responsabile, impegnandosi a fare della stessa un uso diligente e confidenziale.</h3></span></p>
+
+	<p class="c5"><span class="c6"><h3 class="privacy__subtitle">2. TITOLARITÀ E PROPRIETÀ INTELLETTUALE E INDUSTRIALE </h3></span></p>
+
+<p class="c3"><span class="c0">WHOTEACH, in proprio conto o per conto di terzi, è titolare di tutti i diritti di proprietà intellettuale e industriale delle proprie pagine web, così come degli elementi contenuti nelle stesse (materiale informativo, marche, immagini, suoni, audio, video o testi: loghi, combinazioni di colori, struttura e disegno, selezione di materiali usati, software necessari al suo funzionamento, accesso e uso, ecc.)
+In virtù di quanto disposto dalla normativa nazionale, europea e internazionale relativamente alla proprietà intellettuale, rimangono espressamente proibite la riproduzione, la distribuzione e la comunicazione pubblica, incluso la modalità di messa a disposizione, della totalità o di una parte dei contenuti di questa pagina web e, di fatto, del contenuto elaborato da WHOTEACH, a fini commerciali, in qualsiasi supporto e in qualsiasi strumento tecnico, senza previa autorizzazione di WHOTEACH.
+L’utente s’impegna a rispettare i diritti di proprietà intellettuale e industriale di WHOTEACH. Potrà visualizzare gli elementi delle differenti pagine web ed anche stamparli, copiarli e archiviarli nel disco rigido del proprio computer o in qualsiasi altro supporto fisico in qualsiasi momento, ma solo ed esclusivamente per uso personale e privato. L’utente dovrà astenersi da eliminare, alterare, eludere o manipolare qualsiasi dispositivo di protezione o sistema di sicurezza eventualmente installato nelle pagine di WHOTEACH.
+Vedi Notifica a WHOTEACH d’infrazione di diritti di Proprietà Intellettuale.</h3></span></p>
+
+<p class="c5"><span class="c6"><h3 class="privacy__subtitle">3. RIGUARDO LA PUBBLICAZIONE DI CORSI E QUALSIASI ALTRO CONTENUTO FORNITO DAGLI UTENTI di WHOTEACH </h3></span></p>
+<p class="c3"><span class="c0">L’obiettivo principale di WHOTEACH è mettere a disposizione la piattaforma per la creazione di corsi da parte di “esperti”, o meglio utenti accreditati (aziende, università e qualsiasi altro centro di formazione) e la possibilità di utilizzare i servizi di WHOTEACH per ottenere la massima diffusione della propria offerta formativa e ottenere, di conseguenza, nuove iscrizioni ai propri corsi.
+Inoltre, WHOTEACH dà la possibilità a agli Utenti accreditati di includere ogni tipo d’informazione che desideri condividere con gli altri Utenti di WHOTEACH. Per esempio, opinioni riguardo i corsi.
+Attraverso la messa a disposizione di contenuti sulla piattaforma web di WHOTEACH, l’Utente (Ente o Utente privato) dichiara di essere il legittimo titolare dei diritti di proprietà intellettuale e industriale o di essere autorizzato alla distribuzione e comunicazione pubblica dei contenuti, e autorizza e pertanto cede esplicitamente a WHOTEACH, il  contenuto fornito a tempo indeterminato e per chiunque per la sua riproduzione, distribuzione e comunicazione pubblica attraverso qualsiasi mezzo fisico o elettronico, principalmente Internet (attraverso qualsiasi dispositivo) e posta elettronica.
+L’utente che desideri condividere e metta a disposizione contenuti e/o informazioni attraverso WHOTEACH (corsi e opinioni compresi) accetta espressamente che suddetto contenuto e/o informazione possa essere pubblicato e indicizzato su Google, altri motori di ricerca e qualunque altro mezzo di diffusione.</h3></span></p>
+
+<p class="c5"><span class="c6"><h3 class="privacy__subtitle">4. PUBBLICAZIONE DI INFORMAZIONI SUI CORSI </h3></span></p>
+
+<p class="c3"><span class="c0"> WHOTEACH stabilisce le seguenti norme per la pubblicazione di contenuti da parte degli Utenti:
+
+	<li> L’utente deve pubblicare il miglior contenuto possibile.primo elemento;</li>
+	<li>Ogni informazione pubblicata dall’Utente su WHOTEACH dovrà essere legale e veritiera e non violare diritti di terzi né la normativa vigente. A tale scopo, l’Utente garantisce l’autenticità di tutte le informazioni pubblicate su WHOTEACH;</li>
+	<li>Analogamente, sarà responsabilità dell’Utente che pubblica corsi tenere le informazioni pubblicate su WHOTEACH aggiornate e adattate in ogni momento alla situazione reale in cui si trovi;</li>
+	<li>L’Utente è l’unico responsabile dei contenuti da lui pubblicati;</li>
+	<li>Allo stesso tempo, l’inclusione di tali informazioni su corsi e centri di formazione non implicherà nessun tipo di associazione, fusione o partecipazione di WHOTEACH alle imprese, università o qualunque altra entità, salvo nel caso in cui WHOTEACH lo stabilisca espressamente nelle proprie Condizioni o nel portale</li>
+</ol> </h3></span></p>
+<p class="c5"><span class="c6"><h3 class="privacy__subtitle">5. PUBBLICAZIONE DI OPINIONI </h3></span></p>
+
+<p> Gli utenti possono fornire attraverso la piattaforma, opinioni sui corsi pubblicati su WHOTEACH.
+Vedi Notifica a WHOTEACH di contenuti diffamatori.
+
+<p class="c3"><span class="c7"><h3 class="privacy__subtitle">6. PROIBIZIONI SULLA PUBBLICAZIONE DEL CONTENUTO</h3></span></p>
+
+<p class="c3"><span class="c0">WHOTEACH non permette la distribuzione, gestione o divulgazione di contenuti che pregiudichino la qualità del servizio. A titolo esplicativo e non limitativo, WHOTEACH proibisce l’uso di contenuti:
+<p><ol>
+<li> Che siano considerati illeciti rispetto alla normativa nazionale, comunitaria o internazionale o che realizzino attività considerate illecite o che violino i principi di buona fede.
+<li> Che violino ciò che è stabilito dalle Condizioni legali di WHOTEACH.
+<li> Che violino i diritti fondamentali delle persone, cerchino di approfittare delle debolezze dell’Utente, manchino di educazione in rete, danneggino o possano generare opinioni negative nei nostri Utenti o Terzi. Di fatto, a titolo esemplificativo e non limitativo: qualsiasi diritto legale di Terzi. Quelli che favoriscano o potenzino la creazione, il mantenimento o l’incentivazione di attività relative alla pornografia, materiale osceno o gestione di contatti erotici; quelli che siano in relazione con la chiaroveggenza, i tarocchi, le “scienze occulte” o qualsiasi altro contenuto simile; e in generale qualsiasi contenuto che WHOTEACH consideri non appropriato agli Utenti e, in particolare, ai minorenni. E in generale quelli che contravvengano ai principi di legalità, onorabilità, responsabilità, protezione della dignità umana, protezione dei minori, protezione dell’ordine pubblico, protezione della vita privata, protezione del consumatore e dei diritti di proprietà intellettuale e industriale.
+In nessun caso WHOTEACH sarà responsabile dei contenuti e delle opinioni immesse dagli Utenti attraverso qualsiasi strumento di partecipazione.
+</ol></h3></span></p>
+
+
+							  <p class="c3"><span class="c7"><h3 class="privacy__subtitle">7. DIRITTO DI ESCLUSIONE</h3></span></p>
+							  <p class="c3"><span class="c0">WHOTEACH si riserva il diritto di diniego e di recesso nell’accesso al proprio sito web e/o ai servizi offerti, senza obbligo di preavviso, su richiesta propria o di un terzo, agli Utenti che non rispettino le seguenti Condizioni legali. Allo stesso tempo, si riserva il diritto di recesso nel caso di contenuti considerati incompatibili con le Condizioni di WHOTEACH o che, a suo giudizio, non risultino adeguati alla pubblicazione sui siti web di WHOTEACH o contenuti che consideri non appropriati alle caratteristiche e alle finalità di WHOTEACH.
+</span></p>
+							  <p class="c3"><span class="c7"><h3 class="privacy__subtitle">8. ESCLUSIONE DI GARANZIE E RESPONSABILITÀ</h3></span></p>
+							  <p class="c3"><span class="c0">WHOTEACH non è responsabile, in alcun caso, dei danni e pregiudizi di qualsiasi natura che possano occorrere, a titolo esemplificativo e non limitativo: per errori o omissioni nei contenuti pubblicati da terzi (Centri e/o Utenti); per mancanza di disponibilità del portale; per qualsiasi situazione derivante da causa fortuita o di forza maggiore, avendo adottato tutti gli strumenti tecnologici necessari per evitarlo.
+							  WHOTEACH non può controllare ogni contenuto pubblicato, quindi non può assumersi la responsabilità sugli stessi.
+							  In nessun caso WHOTEACH si assumerà la responsabilità per i corsi, le opinioni e qualsiasi altro contenuto pubblicato dagli Utenti o provenienti da collegamenti di un altro sito, né garantirà la disponibilità tecnica, la qualità, l’affidabilità, l’esattezza, l’ampiezza, la veridicità, la validità e la costituzionalità di qualsiasi materiale o informazione contenuto in ciascuno di detti corsi, collegamenti ipertestuali a altri siti web.
+</span></p>
+							 <p class="c3"><span class="c7"><h3 class="privacy__subtitle">9. PRIVACY </h3></span></p>
+							 <p class="c3"><span class="c0">Qualsiasi informazione personale che ci venga fornita attraverso il sito web sarà trattata in accordo con la nostra <a href="https://www.whoteach.eu/lms/policy/privacy_policy.html">Policy di privacy</a>.<br>
+										  
+							<p class="c3"><span class="c7"><h3 class="privacy__subtitle"> 10. MODIFICA DELLE CONDIZIONI LEGALI E POLITICHE DI PROTEZIONE DEI DATI</h3></span></p>
+							<p class="c3"><span class="c0">WHOTEACH si riserva il diritto di effettuare, senza previo avviso, le modifiche che consideri opportune in qualsiasi dei siti web di cui è titolare, apportando modifiche, cancellazioni o aggiunte sia sui contenuti che si pubblicano che sui servizi che si forniscono.</span></p>
+							 <p class="c3"><span class="c7"><h3 class="privacy__subtitle"> 11. CONDIZIONI GENERALI</h3></span></p>
+							<p class="c3"><span class="c0">WHOTEACH perseguirà l’inadempimento delle presenti Condizioni, così come qualsiasi utilizzo indebito dei propri siti web, esercitando le azioni civili e penali di cui è titolare di diritto.</span></p>
+ <p class="c3"><span class="c0"><h3 class="privacy__subtitle">12. LEGISLAZIONE APPLICABILE E GIURISDIZIONE</h3></span></p>
+<p class="c3"><span class="c0">La piattaforma web WHOTEACH, escludendo i collegamenti a terzi, è controllato da SOCIAL THINGS SRL con sede legale in Via Battista de Rolandi 1, 20156 Milano MI. Tramite l’accesso, la pubblicazione e/o l’uso di questo sito web, si accetta espressamente che qualsiasi disputa, reclamo o altra questione derivata o relativa saranno valutate in base alla normativa spagnola vigente e qualsiasi controversia sarà sottoposta ai Giudizi e tribunali della città di Milano, salvo che la normativa di tutela ai consumatori e agli Utenti non stabilisca altri criteri.
+</h3></span></p>
+<p class="c5"><span class="c6"><h1 class="privacy__title">GUIDA PER LE OPINIONI DEGLI UTENTI</h1></span></p>
+
+<p class="c3"><span class="c0 ">Le opinioni espresse appartengono agli Utenti di WHOTEACH e non a WHOTEACH.
+Tutti gli Utenti che abbiano seguito un corso da WHOTEACH hanno diritto a pubblicare le proprie opinioni o esperienze personali rispetto al Corso in questione. L’Utente stabilisce che, a beneficio di tutti gli Utenti di WHOTEACH, venga mantenuta pubblicata la sua opinione anche nel caso in cui decidesse di non usufruire più del Servizio.
+L’Utente certifica che la sua opinione è basata sulla propria diretta esperienza, che rifletta la sua opinione sincera sul Corso, che non ha nessuna relazione, sia personale che imprenditoriale, con l’entità e che quest’ultima non gli ha offerto incentivo o somme di denaro per pubblicarla.
+utte le opinioni devono rispettare le seguenti direttive:
+<p><ol>
+<li>  Essere atte a tutto il pubblico: assenza di blasfemie, minacce, descrizioni offensive per la persona, commenti che dimostrino pregiudizio, incitazione all’odio e qualsiasi contenuto che non sia di tipo familiare e amichevole. Non si ammettono commenti grafici su attività criminali violente né sulla partecipazione ad attività illegali.
+
+<li> Essere scritte da Utenti registrati maggiori di 16 anni.
+
+<li> Essere originali: le opinioni potranno contenere solo materiale originale e non copiato da altre fonti.
+
+<li> Essere veritiere e corrispondenti ad un’esperienza personale: le opinioni dovranno necessariamente essere basate sull’esperienza personale di chi le scrive al termine del corso. Non si ammetteranno informazioni non ricavate direttamente, citazioni di altre fonti o opinioni ed esperienze ritenute appartenere ad altre persone.
+
+<li> Essere rilevanti per l’Utente che cerca informazioni: le opinioni devono essere rilevanti per chi sta cercando corsi di formazione. Non siamo un foro di opinioni politiche, etiche o religiose. Non pubblicheremo domande o commenti indirizzati ai rappresentanti di un Centro, né domande o commenti diretti al personale di WHOTEACH. Non si accetteranno neanche indirizzi di posta elettronica o di Web commerciali o dati di contatto. Non accetteremo materiale promozionale di nessun tipo.
+</ol>
+</span></p>
+<p class="c5"><span class="c6"><h1 class="privacy__title">NOTIFICA A WHOTEACH DI CONTENUTI DIFFAMATORI</h1></span></p>	
+<p class="c3"><span class="c0 ">Le dichiarazioni veritiere e che mostrino un’opinione onesta (come potrebbe essere un giudizio negativo) non devono essere considerate in sé stesse diffamatorie. Si devono considerare attentamente i fatti prima di intraprendere un’accusa o presentare querela o reclamo (e chiedere parere legale in caso di dubbio), posto che una falsa accusa potrebbe comportare responsabilità personale.
+WHOTEACH si riserva il diritto di richiedere la verifica delle generalità ed appurare maggiori informazioni dell'utente in modo da chiarirne i motivi del reclamo. WHOTEACH non potrà investigare sui reclami anonimi, o che siano inviati in modo incorretto, o che non contengano informazioni sufficienti.
+Faremo tutto ciò che è in nostro potere per identificare contenuti diffamatori quando questi non siano notificati, ma non possiamo essere ritenuti responsabili se non veniamo informati di tutti i dati o fatti rilevanti, o se tali fatti non possono essere verificati o investigati. Tutti i dati personali che ci vengono forniti saranno usati in accordo con la nostra Policy di privacy; ti preghiamo di essere certo prima di fornirci qualsiasi dato personale.
+<b>Avviso </b>: qualsiasi dichiarazione fatta potrà essere utilizzata nell’ambito di un procedimento giuridico. Qualsiasi informazione falsa, ingannevole o imprecisa a noi fornita può dar luogo a responsabilità sia civili che penali.
+Coloro i quali desiderino notificare una presunta dichiarazione diffamatoria contenuta nel sito web, non devono esitare a <a href="mailto:support@socialthingum.com">contattare WHOTEACH. </h3></span></p>
+
+<p class="c5"><span class="c6"><h1 class="privacy__title">NOTIFICA A WHOTEACH DI INFRAZIONE DEI DIRITTI DI PROPRIETÀ INTELLETTUALE</h1></span></p>
+
+<p class="c3"><span class="c0 ">Coloro i quali ritengono che un contenuto o un corso sia stato utilizzato in modo da infrangere i propri diritti di proprietà intellettuale sulla stessa, non devono esitare a <a href="mailto:support@socialthingum.com">contattare </a> WHOTEACH.
+WHOTEACH si riserva il diritto di richiedere la verifica delle generalità e di cercare maggiori informazioni sull'Utente per chiarirne i motivi del reclamo. WHOTEACH non potrà investigare sui reclami anonimi, o che siano inviati in modo incorretto, o che non contengano informazioni sufficienti.
+Faremo tutto ciò che è in nostro potere per identificare contenuti illegali o violatori, ma non possiamo essere ritenuti responsabili se non veniamo informati di tutti i dati o fatti rilevanti, o se tali fatti non possono essere verificati.
+<b> Avviso </b>: qualsiasi dichiarazione fatta potrà essere utilizzata nell’ambito di un procedimento giuridico. Qualsiasi informazione falsa, ingannevole o imprecisa a noi fornita può dar luogo a responsabilità sia civili che penali.
+<b> Coloro i quali desiderino notificare a WHOTEACH una presunta infrazione dei diritti di proprietà intellettuale contenuta nel nostro sito web, non devono esitare a <a href="mailto:support@socialthingum.com">contattare </a> WHOTEACH.</h3></span></p>
+
+						</div>        
+					</section>
+				</div>
+								
+			</div>
+
+<footer id="page-footer" class="d-none d-lg-block">
+
+<div id="course-footer"></div>
+                <div class="container blockplace1"><div class="row"><div class="left-col col-4"><h3>Categories</h3><div class="content">
+    <ul class="unlist">
+        <li class="r0">
+            <div class="column c1"><a class="translate" href="/lms/course/index.php?categoryid=1">Abilità  Informatiche</a></div>
+        </li>
+        <li class="r1">
+            <div class="column c1"><a class="translate" href="/lms/course/index.php?categoryid=14">Competenze in economia</a></div>
+        </li>
+        <li class="r0">
+            <div class="transalte column c1"><a class="translate" href="/lms/course/index.php?categoryid=15">Abilità  comunicative</a></div>
+        </li>
+        <li class="r1">
+            <div class="column c1"><a class="translate" href="/lms/course/index.php?categoryid=20">Visione imprenditoriale</a></div>
+        </li>
+        <li class="r0">
+            <div class="column c1"><a class="translate" href="/lms/course/index.php?categoryid=16">Sviluppo personale</a></div>
+        </li>
+    </ul>
+    <div class="footer"><a class="translate" href="/lms/course/index.php">See all curses</a> ...</div>
+</div>
+         </div><div class="left-col col-4"><h3>Social Thingum</h3><p>
+    <span><a href="http://www.socialthingum.com/" target="_blank" rel="noreferrer noopener">Social Thingum</a> <span class="translate">sviluppa tecnologie ICT innovative e algoritmi per collegare persone e oggetti attraverso</span> <a class="autolink" title="Social Network" href="/mahara">Social Network</a> </span><span class="translate">Whoteach is a Learning Management System that aims to foster the development of employees’ capabilities,aggregating and diffusing knowledge from experts.</span></p>
+         </div><div class="left-col col-4"><h3>Contacts</h3><div class="content">
+    <div class="no-overflow"><address class="translate">Sedi operative:</address><address>Viale Umbria 63, Milano</address><address class="translate">Sede legale:</address><address>Via De Rolandi 1, Milano</address><address>E-mail: <a href="mailto:support@socialthingum.com"><u>support@socialthingum.com</u></a><br /></address>
+        <h6>Connect with us:</h6>
+        <div class="social_icons pull-right">
+            <a class="social fa fa-facebook" target="_blank" href="https://www.facebook.com/socialthingum/" rel="noreferrer noopener"> </a>
+            <a class="social fa fa-youtube" href="https://www.youtube.com/channel/UCYHKiVrwoAJeSu-VvnYkrwA" target="_blank" rel="noreferrer noopener"> </a>
+            <a class="social fa fa-linkedin" href="https://www.linkedin.com/company/social-thingum/" target="_blank" rel="noreferrer noopener"> </a>
+
+        </div>
+    </div>
+</div>
+         </div></div><div class="row"><div class="left-col col-12"><p style="text-align:left;">Copyright - <a href="https://www.socialthingum.com/" target="_blank" rel="noreferrer noopener">Social Thingum <span style="font-size:12pt;font-family:'Times New Roman';">®</span></a>  |   Social Things SRL    |   P.IVA: 08941810965<br /><br />
+
+    <a href="https://www.whoteach.it/lms/policy/privacy_policy.html" target="_blank" rel="noreferrer noopener">Privacy Policy </a>| <a href="https://www.whoteach.it/lms/policy/cookie_policy.html" target="_blank" rel="noreferrer noopener"> Cookie policy </a> | <a href="https://www.whoteach.it/lms/policy/legali.html" target="_blank" rel="noreferrer noopener"> Note Legali </a> </p></div></div></div>        <div class="container">
+            <div class="row">
+                <div class="col-12 pagination-centered">
+<div class="socialbox"><a target="_blank" title="Facebook" href="https://www.facebook.com/SocialThingum"><i class="fa fa-facebook-square"></i></a></div>                </div>
+            </div>
+        </div>
+
+    <div class="info container2 clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 my-md-0 my-2">
+                    <div class="tool_usertours-resettourcontainer"></div>
+<p style="text-align:left;">Copyright - <a href="https://www.socialthingum.com/" target="_blank" rel="noreferrer noopener">Social Thingum <span style="font-size:12pt;font-family:'Times New Roman';">®</span></a>  |   Social Things SRL    |   P.IVA: 08941810965<br /><br />
+
+    <a href="https://www.whoteach.it/lms/policy/privacy_policy.html" target="_blank" rel="noreferrer noopener">Privacy Policy </a>| <a href="https://www.whoteach.it/lms/policy/cookie_policy.html" target="_blank" rel="noreferrer noopener"> Cookie policy </a> | <a href="https://www.whoteach.it/lms/policy/legali.html" target="_blank" rel="noreferrer noopener"> Note Legali </a> </p>                </div>
+
+                <div class="col-md-4 my-md-0 my-2">
+                    <div class="tool_dataprivacy"><a href="https://www.whoteach.it/lms/admin/tool/dataprivacy/summary.php">Riepilogo della conservazione dei dati</a></div><a href="https://download.moodle.org/mobile?version=2020061500.01&amp;lang=it&amp;iosappid=633359593&amp;androidappid=com.moodle.moodlemobile">Ottieni l'app mobile</a><span id="load">Page loaded in 0.78 secondi</span><div class="purgecaches"><a href="https://www.whoteach.it/lms/admin/purgecaches.php?confirm=1&amp;sesskey=NE9kQkfuCW&amp;returnurl=%2F">Svuota le cache</a></div>                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    
+<script type="text/javascript">
+
+jQuery(document).ready(function($){
+
+$("a[href='https://www.whoteach.eu/lms/mod/url/view.php?id=63']").attr('href','https://www.whoteach.eu/mahara')
+});
+
+//modifica blocco whoteach social
+document.getElementById("inst874").getElementsByClassName("content")[0].style.padding ="0px";
+document.getElementById("inst874").getElementsByTagName("p")[0].style.margin ="0px";
+
+</script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+ <link rel="stylesheet" type="text/css" href="/lms/cookie-law-popup/css/jquery-eu-cookie-law-popup.css"/>
+ <script src="/lms/cookie-law-popup/js/jquery-eu-cookie-law-popup.js"></script>
+ <script src="/lms/cookie-law-popup/js/custom.js"></script><script type="text/javascript">
+//<![CDATA[
+var require = {
+    baseUrl : 'https://www.whoteach.eu/lms/lib/requirejs.php/-1/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://www.whoteach.eu/lms/lib/javascript.php/-1/lib/jquery/jquery-3.1.0.min',
+        jqueryui: 'https://www.whoteach.eu/lms/lib/javascript.php/-1/lib/jquery/ui-1.12.1/jquery-ui.min',
+        jqueryprivate: 'https://www.whoteach.eu/lms/lib/javascript.php/-1/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script type="text/javascript" src="https://www.whoteach.eu/lms/lib/javascript.php/-1/lib/requirejs/require.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+require(['core/first'], function() {
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp(function(videojs) {
+        videojs.options.flash.swf = "https://www.whoteach.eu/lms/media/player/videojs/videojs/video-js.swf";
+videojs.addLanguage("it",{
+ "Play": "Play",
+ "Pause": "Pausa",
+ "Current Time": "Orario attuale",
+ "Duration Time": "Durata",
+ "Remaining Time": "Tempo rimanente",
+ "Stream Type": "Tipo del Streaming",
+ "LIVE": "LIVE",
+ "Loaded": "Caricato",
+ "Progress": "Stato",
+ "Fullscreen": "Schermo intero",
+ "Non-Fullscreen": "Chiudi schermo intero",
+ "Mute": "Muto",
+ "Unmute": "Audio",
+ "Playback Rate": "Tasso di riproduzione",
+ "Subtitles": "Sottotitoli",
+ "subtitles off": "Senza sottotitoli",
+ "Captions": "Sottotitoli non udenti",
+ "captions off": "Senza sottotitoli non udenti",
+ "Chapters": "Capitolo",
+ "You aborted the media playback": "La riproduzione del filmato è stata interrotta.",
+ "A network error caused the media download to fail part-way.": "Il download del filmato è stato interrotto a causa di un problema rete.",
+ "The media could not be loaded, either because the server or network failed or because the format is not supported.": "Il filmato non può essere caricato a causa di un errore nel server o nella rete o perché il formato non viene supportato.",
+ "The media playback was aborted due to a corruption problem or because the media used features your browser did not support.": "La riproduzione del filmato è stata interrotta a causa di un file danneggiato o per l’utilizzo di impostazioni non supportate dal browser.",
+ "No compatible source was found for this media.": "Non ci sono fonti compatibili per questo filmato."
+});
+
+    });
+});;
+require(["block_navigation/navblock"], function(amd) { amd.init("4"); });;
+require(["block_settings/settingsblock"], function(amd) { amd.init("5", "expandable_branch_71_siteadministration"); });;
+
+require(['core/yui'], function(Y) {
+    M.util.init_skiplink(Y);
+});
+;
+
+require(['core/yui'], function(Y) {
+    Y.use('moodle-core-actionmenu', function() {
+        M.core.actionmenu.init();
+    });
+});
+;
+
+require(['jquery'], function($) {
+    $('#single_select5d91d2e01890c38').change(function() {
+        $('#single_select_f5d91d2e01890c37').submit();
+    });
+});
+;
+require(["core/log"], function(amd) { amd.setConfig({"level":"trace"}); });
+});
+//]]>
+</script>
+<script type="text/javascript" src="https://www.whoteach.eu/lms/theme/javascript.php/lambda/1569404273/footer"></script>
+<script type="text/javascript">
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"Ultime modifiche","name":"Nome","error":"Errore","info":"Informazioni","yes":"S\u00ec","no":"No","viewallcourses":"Visualizza tutti i corsi","cancel":"Annulla","morehelp":"Aiuto ulteriore","loadinghelp":"Caricamento in corso...","confirm":"Conferma","areyousure":"Sei sicuro?","closebuttontitle":"Chiudi","unknownerror":"Errore sconosciuto"},"repository":{"type":"Tipo","size":"Dimensione","invalidjson":"Stringa JSON non valida","nofilesattached":"Non sono presenti file allegati","filepicker":"File picker","logout":"Logout","nofilesavailable":"Non sono presenti file","norepositoriesavailable":"Spiacente, nessuno dei repostory disponibili pu\u00f2 restituire file nel formato richiesto.","fileexistsdialogheader":"Il file esiste gi\u00e0","fileexistsdialog_editor":"Un file con lo stesso nome \u00e8 gi\u00e0 stato allegato al testo che stai modificando.","fileexistsdialog_filemanager":"Un file con lo stesso nome \u00e8 gi\u00e0 stato allegato","renameto":"Rinomina in \"{$a}\"","referencesexist":"Sono presenti {$a} alias\/scorciatoie collegate a questo file","select":"Scegli"},"admin":{"confirmdeletecomments":"Stai per eliminare commenti, sei sicuro ?","confirmation":"Conferma"},"block":{"addtodock":"Sposta nel dock","undockitem":"Rimuovi dal dock","dockblock":"Sposta blocco {$a} nel dock","undockblock":"Togli il blocco {$a} dal dock","undockall":"Rimuovi tutto dal dock","hidedockpanel":"Nascondi il pannello dock","hidepanel":"Nascondi pannello"},"langconfig":{"thisdirectionvertical":"btt"}};
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+(function() {Y.use("moodle-core-dock-loader",function() {M.core.dock.loader.initLoader();
+});
+Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\n\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"it"});
+});
+M.util.help_popups.setup(Y);
+Y.use("moodle-core-popuphelp",function() {M.core.init_popuphelp();
+});
+M.util.init_block_hider(Y, {"id":"inst874","title":"Social Network","preference":"block874hidden","tooltipVisible":"Nascondi blocco Social Network","tooltipHidden":"Visualizza blocco Social Network"});
+M.util.init_block_hider(Y, {"id":"inst622","title":"News","preference":"block622hidden","tooltipVisible":"Nascondi blocco News","tooltipHidden":"Visualizza blocco News"});
+M.util.init_block_hider(Y, {"id":"inst612","title":"Messaggi","preference":"block612hidden","tooltipVisible":"Nascondi blocco Messaggi","tooltipHidden":"Visualizza blocco Messaggi"});
+M.util.init_block_hider(Y, {"id":"inst4","title":"Navigazione","preference":"block4hidden","tooltipVisible":"Nascondi blocco Navigazione","tooltipHidden":"Visualizza blocco Navigazione"});
+M.util.init_block_hider(Y, {"id":"inst5","title":"Amministrazione","preference":"block5hidden","tooltipVisible":"Nascondi blocco Amministrazione","tooltipHidden":"Visualizza blocco Amministrazione"});
+M.util.init_block_hider(Y, {"id":"inst624","title":"Categorie di corso","preference":"block624hidden","tooltipVisible":"Nascondi blocco Categorie di corso","tooltipHidden":"Visualizza blocco Categorie di corso"});
+M.util.init_block_hider(Y, {"id":"inst578","title":"Social Thingum","preference":"block578hidden","tooltipVisible":"Nascondi blocco Social Thingum","tooltipHidden":"Visualizza blocco Social Thingum"});
+M.util.init_block_hider(Y, {"id":"inst579","title":"Contacts","preference":"block579hidden","tooltipVisible":"Nascondi blocco Contacts","tooltipHidden":"Visualizza blocco Contacts"});
+ M.util.js_pending('random5d91d2e01890c47'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random5d91d2e01890c47'); });
+})();
+//]]>
+</script>
+
+
+<!--[if lte IE 9]>
+<script src="https://www.whoteach.eu/lms/theme/lambda/javascript/ie/iefix.js"></script>
+<![endif]-->
+
+
+<script>
+jQuery(document).ready(function ($) {
+$('.navbar .dropdown').hover(function() {
+	$(this).addClass('extra-nav-class').find('.dropdown-menu').first().stop(true, true).delay(250).slideDown();
+}, function() {
+	var na = $(this)
+	na.find('.dropdown-menu').first().stop(true, true).delay(100).slideUp('fast', function(){ na.removeClass('extra-nav-class') })
+});
+
+});
+
+jQuery(document).ready(function() {
+    var offset = 220;
+    var duration = 500;
+    jQuery(window).scroll(function() {
+        if (jQuery(this).scrollTop() > offset) {
+            jQuery('.back-to-top').fadeIn(duration);
+        } else {
+            jQuery('.back-to-top').fadeOut(duration);
+        }
+    });
+    
+    jQuery('.back-to-top').click(function(event) {
+        event.preventDefault();
+        jQuery('html, body').animate({scrollTop: 0}, duration);
+        return false;
+    })
+});
+
+/*	jQuery(function(){
+		jQuery('#camera_wrap').camera({
+			fx: 'random',
+			height: 'auto',
+			loader: 'bar',
+			thumbnails: false,
+			pagination: false,
+			autoAdvance: true,
+			hover: false,
+			navigationHover: true,
+			opacityOnGrid: false
+		});
+	});*/
+
+
+</script>
+
+</body>
+</html>

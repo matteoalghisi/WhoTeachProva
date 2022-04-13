@@ -1,0 +1,111 @@
+/* ===== TOC numbering styles ===== */
+
+/* numbering == NONE */
+#page-mod-recommend-print .recommend_toc_none {
+    page-break-before: always;
+}
+
+#page-mod-recommend-print .recommend_toc_none ul,
+#page-mod-recommend-print .recommend_toc_none ul ul {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+#page-mod-recommend-print .recommend_toc_none li {
+    margin-top: 10px;
+    list-style: none;
+}
+
+#page-mod-recommend-print .recommend_toc_none li li {
+    margin-top: 0;
+    list-style: none;
+}
+/* numbering == NUMBERED */
+#page-mod-recommend-print .recommend_toc_numbered {
+    page-break-before: always;
+}
+
+#page-mod-recommend-print .recommend_toc_numbered li {
+    margin-top: 10px;
+    list-style: none;
+}
+
+#page-mod-recommend-print .recommend_toc_numbered li li {
+    margin-top: 0;
+    list-style: none;
+}
+
+#page-mod-recommend-print .recommend_toc_numbered ul,
+#page-mod-recommend-print .recommend_toc_numbered ul ul {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+/* numbering == BULLETS */
+#page-mod-recommend-print .recommend_toc_bullets {
+    page-break-before: always;
+}
+
+#page-mod-recommend-print .recommend_toc_bullets li {
+    margin-top: 10px;
+    list-style: none;
+}
+
+#page-mod-recommend-print .recommend_toc_bullets li li {
+    margin-top: 0;
+    list-style: circle;
+}
+
+#page-mod-recommend-print .recommend_toc_bullets ul {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+#page-mod-recommend-print .recommend_toc_bullets ul ul {
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+/* numbering == INDENTED */
+#page-mod-recommend-print .recommend_toc_indented {
+    page-break-before: always;
+}
+
+#page-mod-recommend-print .recommend_toc_indented li {
+    margin-top: 10px;
+    list-style: none;
+}
+
+#page-mod-recommend-print .recommend_toc_indented li li {
+    margin-top: 0;
+    list-style: none;
+}
+
+#page-mod-recommend-print .recommend_toc_indented ul {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+#page-mod-recommend-print .recommend_toc_indented ul ul {
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+#page-mod-recommend-print .recommend .recommend_chapter,
+#page-mod-recommend-print .recommend .recommend_description {
+    page-break-before: always;
+}
+
+#page-mod-recommend-print {
+    padding-top: 0;
+}
+
+/* Exclude elements from printing. */
+@media print {
+    .hidden-print {
+        display: none !important; /* stylelint-disable-line declaration-no-important */
+    }
+    .recommend .recommend_title {
+        margin-top: 45%;
+    }
+}

@@ -1,0 +1,99 @@
+From: "Salvato da Internet Explorer 11"
+Subject: 
+Date: Tue, 8 Jul 2014 12:51:45 +0200
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://raw.githubusercontent.com/marianoguerra/json.human.js/master/css/json.human.css
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7601.17609
+
+=EF=BB=BF<!DOCTYPE HTML>
+<!DOCTYPE html PUBLIC "" ""><HTML><HEAD><META content=3D"IE=3D11.0000"=20
+http-equiv=3D"X-UA-Compatible">
+
+<META http-equiv=3D"Content-Type" content=3D"text/html; =
+charset=3Dutf-8">
+<META name=3D"GENERATOR" content=3D"MSHTML 11.00.9600.17126"></HEAD>
+<BODY>
+<PRE>.jh-root, .jh-type-object, .jh-type-array, .jh-key, .jh-value, =
+.jh-root tr{=0A=
+ -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */=0A=
+ -moz-box-sizing: border-box;    /* Firefox, other Gecko */=0A=
+ box-sizing: border-box;         /* Opera/IE 8+ */=0A=
+}=0A=
+=0A=
+.jh-key, .jh-value{=0A=
+ margin: 0;=0A=
+ padding: 0.2em;=0A=
+}=0A=
+=0A=
+.jh-value{=0A=
+    border-left: 1px solid #ddd;=0A=
+}=0A=
+=0A=
+.jh-type-bool, .jh-type-number{=0A=
+    font-weight: bold;=0A=
+    text-align: center;=0A=
+    color: #5286BC;=0A=
+}=0A=
+=0A=
+.jh-type-string{=0A=
+    font-style: italic;=0A=
+    color: #839B00;=0A=
+}=0A=
+=0A=
+.jh-array-key{=0A=
+    font-style: italic;=0A=
+    font-size: small;=0A=
+    text-align: center;=0A=
+}=0A=
+=0A=
+.jh-object-key, .jh-array-key{=0A=
+    color: #444;=0A=
+    vertical-align: top;=0A=
+}=0A=
+=0A=
+.jh-type-object &gt; tr:nth-child(odd), .jh-type-array &gt; =
+tr:nth-child(odd){=0A=
+    background-color: #f5f5f5;=0A=
+}=0A=
+=0A=
+.jh-type-object &gt; tr:nth-child(even), .jh-type-array &gt; =
+tr:nth-child(even){=0A=
+    background-color: #fff;=0A=
+}=0A=
+=0A=
+.jh-type-object, .jh-type-array{=0A=
+    width: 100%;=0A=
+    border-collapse: collapse;=0A=
+}=0A=
+=0A=
+.jh-root{=0A=
+ border: 1px solid #ccc;=0A=
+ margin: 0.2em;=0A=
+}=0A=
+=0A=
+th.jh-key{=0A=
+ text-align: left;=0A=
+}=0A=
+=0A=
+.jh-type-object &gt; tr, .jh-type-array &gt; tr{=0A=
+ border: 1px solid #ddd;=0A=
+ border-bottom: none;=0A=
+}=0A=
+=0A=
+.jh-type-object &gt; tr:last-child, .jh-type-array &gt; tr:last-child{=0A=
+ border-bottom: 1px solid #ddd;=0A=
+}=0A=
+=0A=
+.jh-type-object &gt; tr:hover, .jh-type-array &gt; tr:hover{=0A=
+ border: 1px solid #F99927;=0A=
+}=0A=
+=0A=
+.jh-empty{=0A=
+ font-style: italic;=0A=
+ color: #999;=0A=
+ font-size: small;=0A=
+}=0A=
+</PRE></BODY></HTML>

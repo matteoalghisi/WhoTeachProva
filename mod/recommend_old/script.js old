@@ -1,0 +1,86 @@
+//funzione che chiama RS
+
+function getRecommendation(id, keys){
+
+	var json = {"type":"recommend", "userid":id, "keywords":keys};	   
+
+	$.ajax({
+		//url:'http://localhost:7071/api/HttpExample',
+		url:'http://socialthings-rs-ml.westeurope.cloudapp.azure.com:5000/api/rs',
+		//url:'//socialthings-rs.azurewebsites.net/api/rs',
+
+		type:'POST',
+		dataType: 'json',
+		data: JSON.stringify(json),
+		//contentType: "application/json; charset=utf-8",
+		success: showRecommendation,
+		failure: function() {
+			console.error('errore di chiamata al RS');
+		}
+	});
+	
+	
+
+}
+
+//var resources;
+
+//questa funzione mostra le risorse suggerite dal recommend attraverso la chiamata AJAX precedente
+function showRecommendation(data){
+	
+	var resid = [];
+	Object.keys(data).forEach(function(key) {
+		resid.push(key);
+		//console.log(resid);
+	});
+	
+	$.ajax({
+    type: "POST",
+    url: '/lms/mod/recommend/getRecommendation.php',
+    dataType: 'json',
+	//richiamo la funzione getRS contenuta in un file php passandogli le risorsse
+	//ritorna il nome delle risorse e il loro link per anteprima
+    data: {functionname: 'getRS', arguments: resid},
+
+    success: function (result) {
+            resources = result;
+			console.log(resources);
+			showResources(resources);
+		},
+	failure: function() {
+			console.error('errore funzione showReccomendation()');
+		}
+	});
+		
+	
+
+}
+
+//aggiunge il div contente le risorse da visualizzare
+function showResources(resources){
+	$( ".mform" ).css("display","none");
+	//$( "#region-main" ).append( "<div></div>" );
+	$.get("/lms/mod/recommend/resources_list.html", function(data){
+		$("#region-main").append(data);
+		add_resources_list(resources);
+	});
+}
+
+//aggiunge le risorse alla lista dentro al div
+function add_resources_list(resources){
+	resources.forEach(function(r){ 
+		$("#res_list").append('<li><input type="checkbox" id='+r.id+' name="'+r.name+'" value='+r.id+'><a href="javascript:void(0)" onclick="openPreview(`'+r.url+'`)"><span class="tab">'+r.name+'</span></a></li>');
+	});
+}
+
+function openPreview(url, name) {
+	window.open(url, "Preview: " + name, "width=500,height=500");
+}
+
+
+
+
+
+
+
+

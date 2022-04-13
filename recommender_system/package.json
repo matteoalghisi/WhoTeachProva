@@ -1,0 +1,13 @@
+{
+  "name": "WhoTeach",
+  "version": "1.0.0",
+  "description": "Piattaforma di e-learning digitale WhoTeach",
+  "main": "js/script.js",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "3.5.1",
+    "multiselect-combo-box": "^2.5.0-beta.3"
+  }
+}

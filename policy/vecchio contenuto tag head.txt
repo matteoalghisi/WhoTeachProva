@@ -1,0 +1,19 @@
+<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="88875439-bde4-483f-ba72-3ed21f032283" data-blockingmode="auto" type="text/javascript"></script>
+
+
+SOSTITUITO CON:
+
+<script>
+window.onload = function(){
+    var tag = document.createElement("script");
+    tag.id="Cookiebot"
+    tag.src = "https://consent.cookiebot.com/uc.js";
+    tag.type = "text/javascript";
+    tag.setAttribute("data-cbid", "88875439-bde4-483f-ba72-3ed21f032283");
+    tag.setAttribute("data-blockingmode", "auto");
+    document.getElementsByTagName("head")[0].appendChild(tag);
+}
+</script>
+
+
+PER PERMETTERE CARICAMENTO CORRETTO DELLA PAGINA

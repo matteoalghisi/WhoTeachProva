@@ -1,0 +1,438 @@
+
+<!DOCTYPE html>
+<html  dir="ltr" lang="en" xml:lang="en">
+<head>
+    <title>WhoTeach Project</title>
+    <link rel="shortcut icon" href="https://www.whoteach.eu/lms/theme/image.php/lambda/theme/1569404273/favicon" />
+	<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="88875439-bde4-483f-ba72-3ed21f032283" data-blockingmode="auto" type="text/javascript"></script>
+    <script src="https://www.whoteach.eu/lms/lang/translate.js"></script><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="moodle, WhoTeach Project" />
+	<link rel="stylesheet" type="text/css" href="https://www.whoteach.eu/lms/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple.css" />
+	<script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script>
+	<link rel="stylesheet" type="text/css" href="https://www.whoteach.eu/lms/policy/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="https://www.whoteach.eu/lms/theme/styles.php/lambda/1569404273/all" />
+	<script type="text/javascript">
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/www.whoteach.eu\/lms","sesskey":"XKVWATXChA","themerev":"1569404273","slasharguments":1,"theme":"lambda","iconsystemmodule":"core\/icon_system_standard","jsrev":-1,"admin":"admin","svgicons":true,"usertimezone":"Europa\/Roma","contextid":2,"developerdebug":true};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":true,"base":"https:\/\/www.whoteach.eu\/lms\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/www.whoteach.eu\/lms\/theme\/yui_combo.php?","combine":true,"filter":"RAW","insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/www.whoteach.eu\/lms\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/www.whoteach.eu\/lms\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/www.whoteach.eu\/lms\/theme\/yui_combo.php?m\/-1\/","combine":true,"comboBase":"https:\/\/www.whoteach.eu\/lms\/theme\/yui_combo.php?","ext":false,"root":"m\/-1\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":"DEBUG","modules":{"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-checknet":{"requires":["base-base","moodle-core-notification-alert","io-base"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dock":{"requires":["base","node","event-custom","event-mouseenter","event-resize","escape","moodle-core-dock-loader","moodle-core-event"]},"moodle-core-dock-loader":{"requires":["escape"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-event":{"requires":["event-custom"]},"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-formatchooser":{"requires":["base","node","node-event-simulate"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-modchooser":{"requires":["moodle-core-chooserdialogue","moodle-course-coursebase"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-showadvanced":{"requires":["node","base","selector-css3"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-question-qbankmanager":{"requires":["node","selector-css3"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-qtype_ddimageortext-dd":{"requires":["node","dd","dd-drop","dd-constrain"]},"moodle-qtype_ddimageortext-form":{"requires":["moodle-qtype_ddimageortext-dd","form_filepicker"]},"moodle-qtype_ddmarker-dd":{"requires":["node","event-resize","dd","dd-drop","dd-constrain","graphics"]},"moodle-qtype_ddmarker-form":{"requires":["moodle-qtype_ddmarker-dd","form_filepicker","graphics","escape"]},"moodle-qtype_ddwtos-dd":{"requires":["node","dd","dd-drop","dd-constrain"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_forum-subscriptiontoggle":{"requires":["base-base","io-base"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-mod_quiz-quizquestionbank":{"requires":["base","event","node","io","io-form","yui-later","moodle-question-qbankmanager","moodle-core-notification-dialogue"]},"moodle-mod_quiz-randomquestion":{"requires":["base","event","node","io","moodle-core-notification-dialogue"]},"moodle-mod_quiz-repaginate":{"requires":["base","event","node","io","moodle-core-notification-dialogue"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_grader-gradereporttable":{"requires":["base","node","event","handlebars","overlay","event-hover"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_html-button":{"requires":["moodle-editor_atto-plugin","event-valuechange"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/www.whoteach.eu\/lms\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/www.whoteach.eu\/lms\/theme\/yui_combo.php?","ext":false,"root":"gallery\/-1\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/www.whoteach.eu\/lms\/lib\/javascript.php\/-1\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/www.whoteach.eu\/lms\/lib\/javascript.php\/-1\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/mathjax\/2.7.1\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+	</script>
+
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80040348-2', 'auto');
+  ga('send', 'pageview');
+
+	</script>    
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<noscript>
+				<link rel="stylesheet" type="text/css" href="https://www.whoteach.eu/lms/theme/lambda/style/nojs.css" />
+		</noscript>
+    <!-- Google web fonts -->
+  
+</head>
+
+<body  id="page-site-index" class="format-site course path-site safari dir-ltr lang-it yui-skin-sam yui3-skin-sam www-whoteach-eu--lms pagelayout-frontpage course-1 context-2 two-column has-region-side-pre empty-region-side-pre has-region-side-post used-region-side-post has-region-footer-left used-region-footer-left has-region-footer-middle used-region-footer-middle has-region-footer-right used-region-footer-right has-region-hidden-dock used-region-hidden-dock layout-option-nonavbar">
+
+	<div class="skiplinks">
+		<a href="#maincontent" class="skip">Vai al contenuto principale</a>
+	</div>
+	<script type="text/javascript" src="https://www.whoteach.eu/lms/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple.js"></script>
+	<script type="text/javascript" src="https://www.whoteach.eu/lms/theme/jquery.php/core/jquery-3.1.0.js"></script>
+	<script type="text/javascript" src="https://www.whoteach.eu/lms/theme/jquery.php/theme_lambda/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="https://www.whoteach.eu/lms/theme/jquery.php/theme_lambda/camera.min.1.11.js"></script>
+	<script type="text/javascript" src="https://www.whoteach.eu/lms/theme/jquery.php/theme_lambda/jquery.bxslider.js"></script>
+	<script type="text/javascript" src="https://www.whoteach.eu/lms/lib/javascript.php/-1/lib/javascript-static.js"></script>
+	<script type="text/javascript">
+	//<![CDATA[
+	document.body.className += ' jsenabled';
+	//]]>
+	</script>
+
+
+	<div class="eupopup eupopup-bottom">
+		<div id="wrapper">
+			<div class="container-fluid socials-header"> 
+				<div class="socials row-fluid">
+					<div class="span6">
+						<div class="social_contact">
+							<nobr><i class="fa fa-bookmark-o"></i> &nbsp; <a href='http://www.socialthingum.com/' target="_blank" class="social_contact_web">http://www.socialthingum.com/</a></nobr>
+							<nobr><i class="fa fa-envelope-o"></i> &nbsp;E-mail: <a href='mailto:whoteach@socialthingum.com'>whoteach@socialthingum.com</a></nobr>
+						</div>
+					</div>
+					<div class="span6">
+						<div class="social_icons pull-right">
+							<a class="social fa fa-facebook" href='https://www.facebook.com/socialthingum/' target='_blank'> </a>                                                                                                <a class="social fa fa-youtube" href='https://www.youtube.com/channel/UCYHKiVrwoAJeSu-VvnYkrwA' target='_blank'> </a>            </div>
+					</div>
+				</div>
+			</div>
+
+			<header id="page-header" class="clearfix">
+				<div class="container-fluid">    
+					<div class="row-fluid">
+			<!-- HEADER: LOGO AREA -->
+                        <div class="logo-header">
+							<a class="logo" href="https://www.whoteach.eu/lms" title="Home"><img src="//www.whoteach.eu/lms/pluginfile.php/1/theme_lambda/logo/1569404273/header%20%281%29.png" class="logo" alt="logo" /></a>
+						</div>      
+					</div>
+				</div>     
+			</header>
+
+			<header role="banner" class="navbar">
+				<nav role="navigation" class="navbar-inner">
+					<div class="container-fluid">
+						<a class="brand" href="https://www.whoteach.eu/lms">WhoTeach</a>
+						<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</a>
+						<div class="nav-collapse collapse">
+							<ul class="nav"><li><a title="Courses" href="https://www.whoteach.eu/lms/course/index.php">Courses</a></li><li><a title="Revisions" href="https://www.whoteach.eu/lms/review/index.php">Revisions</a></li><li><a title="Dashboard" href="https://www.whoteach.eu/lms/my/">Dashboard</a></li><li class="dropdown langmenu"><a href="" class="dropdown-toggle" data-toggle="dropdown" title="Lingua">English ‎(en)‎‎<b class="caret"></b></a><ul class="dropdown-menu"><li><a title="English ‎(en)‎" href="https://www.whoteach.eu/lms/policy/privacy_policy_.html">English ‎(en)‎</a></li><li><a title="Italiano ‎(it)‎" href="https://www.whoteach.eu/lms/policy/privacy_policy.html">Italiano ‎(it)‎</a></li></ul><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" title="I miei corsi">I miei corsi<b class="caret"></b></a><ul class="dropdown-menu"><li><a title="Dashboard" href="https://www.whoteach.eu/lms/my/index.php">Dashboard</a></li></ul></ul>                <div class="nav-divider-right"></div>
+							<ul class="nav pull-right">
+								<li></li>
+							</ul>
+							
+							<form id="search" action="https://www.whoteach.eu/lms/course/search.php" method="GET">
+							<div class="nav-divider-left"></div>							
+								<input id="coursesearchbox" type="text" onFocus="if(this.value =='Cerca corsi' ) this.value=''" onBlur="if(this.value=='') this.value='Cerca corsi'" value="Cerca corsi" name="search">
+								<input type="submit" value="">							
+							</form>
+							
+						</div>
+					</div>
+				</nav>
+			</header>
+			
+			<div class="text-center" style="line-height:1em;">
+				<img src="https://www.whoteach.eu/lms/theme/lambda/pix/bg/shadow.png" class="slidershadow frontpage-shadow" alt="">
+			</div>
+
+			<div id="page" class="container-fluid">
+				
+				<div id="page-content" class="row-fluid">
+					<section id="region-main" class="span12">
+						<span class="notifications" id="user-notifications"></span>
+						<div role="main">
+							<span id="maincontent"></span>
+							  <p class="c5"><span class="c6"><h1 class="privacy__title">PRIVACY POLICY</h1></span></p>
+							  <p class="c5"><span class="c0">Dear User,</span></p>
+							  <p class="c5"><span class="c0">The purpose of this Information Notice is to inform you about the methods and purposes of the processing of personal data concerning you, carried out in full compliance with current legislation on the protection of personal data.</span></p>
+							  <p class="c5"><span class="c6"><h3 class="privacy__subtitle">I. DATA PROCESSED</h3></span></p>
+							  <p class="c3"><span class="c7"><h3 class="privacy__subtitle">1. Data Controller</h3></span></p>
+							  <p class="c3"><span class="c0">Social Things SRL - via Battista de Rolandi 1, 20156 MILANO (MI)</span></p>
+							  <p class="c3"><span class="c6">Email address:</span><span class="c0"><a href="mailto:privacy@socialthingum.com">&nbsp;privacy@socialthingum.com</a></span></p>
+							  <p class="c3"><span class="c7"><h3 class="privacy__subtitle">2. Personal data subject to processing</h3></span></p>
+							  <p class="c3"><span class="c0">By means of the Website, <b>Social Things srl</b> processes the following Personal Data: 
+<ul>
+<li class="c3 c9"><span class="c0"><b>User data.</b> In order to use any features (for example, creating or simply enrolling in a course), you must create a user account. When you create or update your account, we process and store the information you provide voluntarily, such as your first and last name, email address and password. </li>
+<li class="c3 c9"><span class="c0"><b>Profile data.</b>The provision of personal data provided in the "User profile" tab (telephone number, photo, gender and date of birth, city, education, employment, preferences, blog postings, course evaluations, assigning a unique identification number) is optional and, as such data may be visible to other users registered on the Site, please do not include sensitive data in that tab. Registering the User through the Facebook account involves linking the User's data to the Website and links the Facebook profile with the Site itself.The User profile data will be publicly visible and, therefore, can be seen by other users.</li>
+<li class="c3 c9"><span class="c0"><b>Data of unregistered users.</b>The optional, explicit and voluntary sending of e-mails to the addresses indicated on the Site entails, by its very nature, the subsequent acquisition of the sender's address, necessary to respond to requests, as well as any other personal data included in the relevant forms or e-mails sent. We invite Users, in requests for services or questions, not to send names or other personal data of third parties that are not strictly necessary nor sensitive data and/or judicial.</li>
+<li class="c3 c9"><span class="c0"><b>Special categories of personal data and/or "sensitive data".</b> As for art. 9 GDPR and 26 Privacy Code (for instance, personal data revealing racial or ethnic origin, political opinions, religious beliefs, state of health, etc.): these categories of data contained in the curricula or other documents uploaded to the web platform will be immediately deleted unless supported by specific and explicit consent to processing. The Curricula must therefore contain a subscription, pursuant to art. 9, EU Regulation 679/2016 and art. 26 of Legislative Decree 196/2003 that authorizes Whoteach to process personal data according to the purposes specified in the policy.</li>
+
+<p class="c3 c9"><span class="c0"><b>A child under the age of sixteen who has access to Whoteach without parental or guardian consent should not register as a User.</b></span></li>
+<li class="c3 c9"><span class="c0"><b>Shared Content.</b> Whoteach web platform allows you to interact with other users or publicly share content, such as posting reviews on a course page, asking questions or providing answers, sending messages to users, or posting photos or other uploaded works. This shared content may be publicly visible, depending on where it was posted.</li>
+<li class="c3 c9"><span class="c0"><b>Course data.</b> When you create or subscribe to a course, we collect certain data such as the course, the uploaded content and any tests, exchanges with other users, and, finally, essays, answers to questions and other materials submitted to meet the requirements of the course.</li>
+<li class="c3 c9"><span class="c0"><b>Communication and support.</b> When you contact Whoteach for support or to report a problem or concern (whether or not you have created an account), we may collect and store contact information, messages and other data about you, such as your name, email address, operating system, IP address and any other information you provide or that we may collect through automated means (processed below). The data thus collected is used to respond to and review your request under this Privacy Policy.</li>
+</ul>					 
+<p class="c3"><span class="c0">The provision of personal data by the user is free and optional. However, if the User refuses to communicate it, it may be impossible for <b>Social Things srl</b> to provide the requested service.</span></p>
+
+<p class="c3"><span class="c7"><h3 class="privacy__subtitle">3. Purpose of Processing Personal Data</h3></span></p>						  	
+<p class="c3"><span class="c0">The Personal Data provided by the User through the website will be processed by Social Things srl on behalf of Whoteach for the following purposes:
+<ul>
+<li class="c3 c9"><span class="c0">1.	Purposes related with the performance of the contract where the User is a party or the performance of pre-contractual measures taken at his request (eg: request for contact through the contact form);</li>
+<li class="c3 c9"><span class="c0">2.	Purposes related to the website registration, which allow you to create a user profile including personal information such as name and surname, email address, age, city / location, educational qualifications, field of work, preferences, interventions in the blog evaluations of courses and authentication activities through registration of access (eg first access to the site and last access to the site).</li>
+<li class="c3 c9"><span class="c0">3.	Purposes of research / statistical analysis on aggregated or anonymous data, therefore without the possibility of identifying the user, aimed at measuring the operation of the Site, measure traffic and evaluate usability and interest;</li>
+<li class="c3 c9"><span class="c0">4.	Purposes related to the fulfilment of a legal obligation to which Social Things srl is subject;</li>
+<li class="c3 c9"><span class="c0">5.	Purposes necessary to ascertain, exercise or defend a right in court or whenever the judicial authorities exercise their jurisdictional functions;</li>
+<li class="c3 c9"><span class="c0">6.	To obtain further detailed information on the purposes of the processing and on the Personal Data specifically relevant for each purpose, the User may refer to the relevant sections of this document.</li>
+</ul>
+
+						 
+							  <p class="c3"><span class="c7"><h3 class="privacy__subtitle">5. Legal basis of the processing</h3></span></p>
+							  <p class="c3"><span class="c0">The Data Controller processes the User's personal data for the achievement of precise purposes and only in the presence of a specific legal basis provided for by the applicable law on privacy and protection of personal data. By using or consulting this site, visitors and users explicitly approve this privacy policy and consent to the processing of their personal data in relation to the methods and purposes described below, including any disclosure to third parties if necessary for the provision of a service. The provision of data and therefore consent to the collection and processing of data are optional, the user can deny consent, and may withdraw at any time the consent already given. However, denying consent may make it impossible to provide certain services and the experience of browsing the site would be compromised. The data of registered users are processed only after registration to the site, resulting in the issuance of access credentials.</span></p>
+							  <p class="c3"><span class="c7"><h3 class="privacy__subtitle">6. Data retention period</h3></span></p>
+							  <p class="c3"><span class="c0">The data are processed and stored for the time required for the purposes for which they were collected. Therefore:
+<ul>
+<li class="c3 c9"><span class="c0"> Personal data processing for purposes related to the execution of a contract between the Data Controller and the User will be retained until the execution of such contract is completed.</li>
+<li class="c3 c9"><span class="c0"> Personal data processing for purposes related to the legitimate interest of the Data Controller will be retained for the time necessary and supported by the same. For more information on the criteria for determining the period of retention of personal data in question, you can contact us at the address provided.</li>
+<li class="c3 c9"><span class="c0"> When processing is based on the User's consent, the Data Controller shall process the personal data until such time as the User's consent is revoked.</li>
+</ul>
+<p class="c3"><span class="c0">The Data Controllor may be required to retain personal data for a longer period in accordance with a legal obligation or by order of an authority. In any case, at the end of the retention period, the personal data will be deleted. Data used for site security purposes (blocking of attempts to damage the site itself) are stored for 30 days. Data for analytics purposes (statistics) are stored for 24 months.
+
+							  
+							<p class="c3"><span class="c7"><h3 class="privacy__subtitle"> 8. Interaction with social networks and external platforms</h3></span></p>
+							<p class="c3"><span class="c0">QThis type of service allows you to interact with social networks, or other external platforms, directly from the pages of https://www.whoteach.eu/lms/. The interactions and information acquired by Social Things srl are in any case subject to the privacy settings of the User for each social network. This type of service may still collect traffic data for the pages where the service is installed, even when the Users do not use it. It is recommended to disconnect from the respective services to ensure that the data processed on https://www.whoteach.eu/lms/ are not linked to the User's profile. 
+</a>.</span></p>
+
+							<p class="c3"><span class="c0 privacy__subtitle">Facebook widget button (Facebook, Inc.)</span></p>
+							  <p class="c3"><span class="c0">Facebook widget button is a service of interaction with the social network Facebook, provided by Facebook, Inc.</span></p>
+							  <p class="c3"><span class="c0 ">Personal Data processed: Cookies; Usage Data.</span></p>
+							  <p class="c3"><span class="c0 ">Place of processing: USA – <a href="https://www.facebook.com/privacy/explanation">Privacy Policy</a>.</span></p>
+							  <p class="c3"><span class="c0 ">This type of service allows you to view and interact with content hosted on external platforms directly from the pages of  <a href="https://www.whoteach.eu/lms/">https://www.whoteach.eu/lms/</a></span></p>
+							  <p class="c3"><span class="c0 ">If such a service is installed, it is possible that, even if Users do not use the service, it collects traffic data relating to the pages on which it is installed.</span></p>
+							  <p class="c3"><span class="c7"><h3 class="privacy__subtitle">9. Viewing content from external platforms</h3></span></p>
+							<p class="c3"><span class="c0 privacy__subtitle">YouTube Video Widget Button (Google Inc.)</span></p>
+							<p class="c3"><span class="c0">YouTube is a video content viewing service managed by Google Inc. that allows Social Things srl to integrate such content into its pages.
+<p class="c3"><span class="c0">Personal Data Collected: Cookies; Usage Data.
+<p class="c3"><span class="c0">Place of treatment: USA - Privacy Policy. </span></p>
+							  <p class="c3"><span class="c7"><h3 class="privacy__subtitle">       Statistics</h3></span></p>
+							  <p class="c3"><span class="c0 ">The services contained in this section allow the Data Controller to monitor and analyse traffic data and are used to keep track of the User's behaviour.</span></p>
+							<p class="c3"><span class="c0 privacy__subtitle">Google Analytics (Google Inc.)</span></p>
+							<p class="c3"><span class="c0">Google Analytics is a web analysis service provided by Google Inc. ("Google"). Google uses the Personal Data collected for the purpose of tracking and examining the use of https://www.whoteach.eu/lms/, compiling reports and sharing them with other services developed by Google. Google may use your Personal Data to contextualize and customize ads in its advertising network.
+Personal Data Collected: Cookies; Usage Data.
+<p class="c3"><span class="c0 ">Place of processing: USA– <a href="https://www.google.com/intl/it/policies/privacy/">Privacy Policy</a> – <a href="https://tools.google.com/dlpage/gaoptout?hl=it">Opt Out</a> </span></p>
+
+<p class="c3"><span class="c7"><h3 class="privacy__subtitle">II. USER RIGHTS</h3></span></p>
+							  <p class="c3"><span class="c0 ">The User, as an interested party, is guaranteed by the Data Controller the exercise of the rights that are recognized under the legislation on the personal data protection.</span></p>
+							  <p class="c3"><span class="c0 ">In particular, the User has the right to:</span></p>
+							  <ul class="c14 lst-kix_list_3-0 start">
+<li class="c3 c9"><span class="c0"><b>Withdraw their consent at any time</b>, when the processing of their personal data is based on consent;</li>
+								 <li class="c3 c9"><span class="c0"><b>Oppose the processing of their data</b>;</li>
+								 <li class="c3 c9"><span class="c0"><b>Access the information regarding the processing of their data</b>, and to receive a copy of the data processed.</li>
+								 <li class="c3 c9"><span class="c0"><b>Verify the personal data processed and request its rectification</b>;</li>
+								 <li class="c3 c9"><span class="c0"><b>to obtain the limitation of the processing</b>, when certain conditions are met;</li>
+								 <li class="c3 c9"><span class="c0"><b>obtain the cancellation</b> or removal of their personal data, when certain conditions are met;</li>
+								 <li class="c3 c9"><span class="c0"><b>receive their data</b> or have them transferred to another holder, in structured format, commonly used and readable by automatic device and, where technically feasible, without obstacles. This provision is applicable when the Data is processed by automated means and the processing is based on the User's consent, on a contract to which the User is a party or on contractual measures connected to it;</li>
+								 <li class="c3 c9"><span class="c0"><b>lodge a complaint</b> with the competent data protection supervisory authority</li>
+							  </ul>
+							   <p class="c3"><span class="c0 ">In order to exercise the User's rights, Users may address a request to the contact details of the Data Controller indicated in this document. Requests are filed free of charge and processed by the Holder as soon as possible, in any case within one month.</p>
+							   <p class="c3"><span class="c7"><h3 class="privacy__subtitle">More information about the treatment</h3></span></p>
+							  <p class="c3"><span class="c0 privacy__subtitle">System log and maintenance</span></p>
+							  <p class="c3"><span class="c0 ">For needs related to operation and maintenance, <a href="https://www.whoteach.eu/lms/">https://www.whoteach.eu/lms/</a> and any third party services used by it may collect system logs, ie files that record interactions and may also contain Personal Data, such as the User IP address.</span></p>
+							  <p class="c3"><span class="c0 privacy__subtitle">Response to "Do Not Track" requests</span></p>
+							  <p class="c3"><span class="c0 "><a href="https://www.whoteach.eu/lms/">https://www.whoteach.eu/lms/</a> does not support "Do Not Track" requests. To find out if any third party services you use support them, please refer to their privacy policies.</span></p>
+							  <p class="c3"><span class="c0 privacy__subtitle">Privacy Policy Changes  </span></p>
+							  <p class="c3"><span class="c0 ">The Data Controller reserves the right to make changes to this privacy policy at any time by informing Users on this page and, if possible, on <a href="https://www.whoteach.eu/lms/">https://www.whoteach.eu/lms/</a> and, where technically and legally feasible, by sending a notification to Users through one of the contact details held by the Data Controller. Please consult this page regularly, referring to the date of the last change indicated at the bottom. </span></p>
+                              <p class="c3"><span class="c7"><h3 class="privacy__subtitle">III. AMENDMENTS</h3></span></p>
+							  
+							  <p class="c2"><span class="c6">This Privacy Policy came into force on 25 May 2018. Social Things srl reserves the right to modify or simply update the content, in part or in full, including due to changes in the Applicable Law. Social Things srl will inform the user of such changes as soon as they are introduced and will be binding as soon as they are published on the Site. Social Things srl therefore invites the user to regularly visit this section to learn about the most recent and updated version of the Privacy Policy so that you are always updated on the data collected and the use that Social Things srl carries out.</span></p>
+							  <p class="c3 c11"><span class="c0"></span></p>
+						</div>        
+					</section>
+				</div>
+								
+			</div>
+
+			<footer id="page-footer" class="container-fluid">
+				<div class="row-fluid">
+					<aside id="block-region-footer-left" class="span4 block-region" data-blockregion="footer-left" data-droptarget="1"><a class="skip skip-block" id="fsb-5" href="#sb-5">Salta Categorie di corso</a><div id="inst624" class="block_course_list  block list_block" role="navigation" data-block="course_list" data-instanceid="624" aria-labelledby="instance-624-header" data-dockable="1"><div class="header"><div class="title"><div class="block_action"></div><h2 id="instance-624-header">Categorie di corso</h2></div></div><div class="content"><ul class="unlist"><li class="r0"><div class="column c1"><a  href="https://www.whoteach.eu/lms/course/index.php?categoryid=1"><img class="icon " alt="Corso" title="Corso" src="https://www.whoteach.eu/lms/theme/image.php/lambda/core/1569404273/i/course" />Abilità informatiche</a></div></li>
+					<li class="r1"><div class="column c1"><a  href="https://www.whoteach.eu/lms/course/index.php?categoryid=14"><img class="icon " alt="Corso" title="Corso" src="https://www.whoteach.eu/lms/theme/image.php/lambda/core/1569404273/i/course" />Competenze in Economia</a></div></li>
+					<li class="r0"><div class="column c1"><a  href="https://www.whoteach.eu/lms/course/index.php?categoryid=15"><img class="icon " alt="Corso" title="Corso" src="https://www.whoteach.eu/lms/theme/image.php/lambda/core/1569404273/i/course" />Abilità Comunicative</a></div></li>
+					<li class="r1"><div class="column c1"><a  href="https://www.whoteach.eu/lms/course/index.php?categoryid=20"><img class="icon " alt="Corso" title="Corso" src="https://www.whoteach.eu/lms/theme/image.php/lambda/core/1569404273/i/course" />Visione imprenditoriale</a></div></li>
+					<li class="r0"><div class="column c1"><a  href="https://www.whoteach.eu/lms/course/index.php?categoryid=16"><img class="icon " alt="Corso" title="Corso" src="https://www.whoteach.eu/lms/theme/image.php/lambda/core/1569404273/i/course" />Sviluppo Personale</a></div></li></ul><div class="footer"><a href="https://www.whoteach.eu/lms/course/index.php">Tutti i corsi</a> ...</div></div></div><span class="skip-block-to" id="sb-5"></span></aside><aside id="block-region-footer-middle" class="span4 block-region" data-blockregion="footer-middle" data-droptarget="1"><a class="skip skip-block" id="fsb-6" href="#sb-6">Salta Social Thingum</a><div id="inst578" class="block_html  block" role="complementary" data-block="html" data-instanceid="578" aria-labelledby="instance-578-header" data-dockable="1"><div class="header"><div class="title"><div class="block_action"></div><h2 id="instance-578-header">Social Thingum</h2></div></div><div class="content"><div class="no-overflow"><p style="text-align: center;"></p><p><span font-family:="" arial,="" helvetica,="" sans-serif;="" font-size:="" 14px;="" font-style:="" normal;="" font-variant-ligatures:="" font-variant-caps:="" font-weight:="" letter-spacing:="" orphans:="" 2;="" text-align:="" left;="" text-indent:="" 0px;="" text-transform:="" none;="" white-space:="" widows:="" word-spacing:="" -webkit-text-stroke-width:="" text-decoration-style:="" initial;="" text-decoration-color:="" display:="" inline="" !important;="" float:="" none;"=""><a href="http://www.socialthingum.com/" target="_blank">Social Thingum</a> <span class="translate">develops innovative ICT systems and algorithms connecting objects through smart</span> <a class="autolink" title="Social Network" href="https://www.whoteach.eu/lms/mod/url/view.php?id=63">Social Network</a>&nbsp;</span><span class="translate">Whoteach is a Learning Management System that aims to foster the development of employees’ capabilities,aggregating and diffusing knowledge from experts.</span></p></div></div></div><span class="skip-block-to" id="sb-6"></span></aside><aside id="block-region-footer-right" class="span4 block-region" data-blockregion="footer-right" data-droptarget="1"><a class="skip skip-block" id="fsb-7" href="#sb-7">Salta Contacts</a><div id="inst579" class="block_html  block" role="complementary" data-block="html" data-instanceid="579" aria-labelledby="instance-579-header" data-dockable="1"><div class="header"><div class="title"><div class="block_action"></div><h2 id="instance-579-header">Contacts</h2></div></div><div class="content"><div class="no-overflow"><address>Sedi operative:&nbsp;</address><address>&nbsp; -&nbsp;<a href="http://www.polihub.it/" target="_blank">PoliHub</a>. Incubatore certificato.&nbsp; Via Durando 38/A , Milano</address><address>&nbsp; - Viale Umbria 63, Milano</address><address>Sede legale: Via De Rolandi 1, Milano</address><address>E-mail:&nbsp;<a href="mailto:whoteach@socialthingum.com"><u>whoteach@socialthingum.com</u></a><br></address><h6>Connect with us:</h6>
+					<div class="social_icons pull-right">
+					<a class="social fa fa-facebook" target="_blank" href="https://www.facebook.com/socialthingum/"> </a>
+					  
+					</div></div></div></div><span class="skip-block-to" id="sb-7"></span></aside> 	</div>
+
+<div class="footerlinks" id="yui_3_17_2_1_1572254353978_1130">
+    	<div class="row-fluid" id="yui_3_17_2_1_1572254353978_1129">
+    		<div class="footnote" id="yui_3_17_2_1_1572254353978_1128"><p style="text-align: left;" id="yui_3_17_2_1_1572254353978_1127">Copyright - <a href="https://www.socialthingum.com/" target="_blank">Social Thingum&nbsp;<span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;">®</span></a> &nbsp;| &nbsp; Social Things SRL &nbsp; &nbsp;| &nbsp; P.IVA: 08941810965<br><br>
+<a id="privacy" href="https://www.whoteach.eu/lms/policy/privacy_policy_.html" target="_blank">Privacy Policy&nbsp;</a>| <a id="cookie" href="https://www.whoteach.eu/lms/policy/cookie_policy_.html" target="_blank"> Cookie policy </a> |  <a id="notelegali" href="https://www.whoteach.eu/lms/policy/terms_and_conditions.html" target="_blank"> Terms and Conditions </a> </p></div>		</div>
+        
+                
+   	</div>
+			</footer>
+
+    
+<script type="text/javascript">
+
+jQuery(document).ready(function($){
+
+$("a[href='https://www.whoteach.eu/lms/mod/url/view.php?id=63']").attr('href','https://www.whoteach.eu/mahara')
+});
+
+//modifica blocco whoteach social
+document.getElementById("inst874").getElementsByClassName("content")[0].style.padding ="0px";
+document.getElementById("inst874").getElementsByTagName("p")[0].style.margin ="0px";
+
+</script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+ <link rel="stylesheet" type="text/css" href="/lms/cookie-law-popup/css/jquery-eu-cookie-law-popup.css"/>
+ <script src="/lms/cookie-law-popup/js/jquery-eu-cookie-law-popup.js"></script>
+ <script src="/lms/cookie-law-popup/js/custom.js"></script><script type="text/javascript">
+//<![CDATA[
+var require = {
+    baseUrl : 'https://www.whoteach.eu/lms/lib/requirejs.php/-1/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://www.whoteach.eu/lms/lib/javascript.php/-1/lib/jquery/jquery-3.1.0.min',
+        jqueryui: 'https://www.whoteach.eu/lms/lib/javascript.php/-1/lib/jquery/ui-1.12.1/jquery-ui.min',
+        jqueryprivate: 'https://www.whoteach.eu/lms/lib/javascript.php/-1/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script type="text/javascript" src="https://www.whoteach.eu/lms/lib/javascript.php/-1/lib/requirejs/require.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+require(['core/first'], function() {
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp(function(videojs) {
+        videojs.options.flash.swf = "https://www.whoteach.eu/lms/media/player/videojs/videojs/video-js.swf";
+videojs.addLanguage("it",{
+ "Play": "Play",
+ "Pause": "Pausa",
+ "Current Time": "Orario attuale",
+ "Duration Time": "Durata",
+ "Remaining Time": "Tempo rimanente",
+ "Stream Type": "Tipo del Streaming",
+ "LIVE": "LIVE",
+ "Loaded": "Caricato",
+ "Progress": "Stato",
+ "Fullscreen": "Schermo intero",
+ "Non-Fullscreen": "Chiudi schermo intero",
+ "Mute": "Muto",
+ "Unmute": "Audio",
+ "Playback Rate": "Tasso di riproduzione",
+ "Subtitles": "Sottotitoli",
+ "subtitles off": "Senza sottotitoli",
+ "Captions": "Sottotitoli non udenti",
+ "captions off": "Senza sottotitoli non udenti",
+ "Chapters": "Capitolo",
+ "You aborted the media playback": "La riproduzione del filmato è stata interrotta.",
+ "A network error caused the media download to fail part-way.": "Il download del filmato è stato interrotto a causa di un problema rete.",
+ "The media could not be loaded, either because the server or network failed or because the format is not supported.": "Il filmato non può essere caricato a causa di un errore nel server o nella rete o perché il formato non viene supportato.",
+ "The media playback was aborted due to a corruption problem or because the media used features your browser did not support.": "La riproduzione del filmato è stata interrotta a causa di un file danneggiato o per l’utilizzo di impostazioni non supportate dal browser.",
+ "No compatible source was found for this media.": "Non ci sono fonti compatibili per questo filmato."
+});
+
+    });
+});;
+require(["block_navigation/navblock"], function(amd) { amd.init("4"); });;
+require(["block_settings/settingsblock"], function(amd) { amd.init("5", "expandable_branch_71_siteadministration"); });;
+
+require(['core/yui'], function(Y) {
+    M.util.init_skiplink(Y);
+});
+;
+
+require(['core/yui'], function(Y) {
+    Y.use('moodle-core-actionmenu', function() {
+        M.core.actionmenu.init();
+    });
+});
+;
+
+require(['jquery'], function($) {
+    $('#single_select5d91d2e01890c38').change(function() {
+        $('#single_select_f5d91d2e01890c37').submit();
+    });
+});
+;
+require(["core/log"], function(amd) { amd.setConfig({"level":"trace"}); });
+});
+//]]>
+</script>
+<script type="text/javascript" src="https://www.whoteach.eu/lms/theme/javascript.php/lambda/1569404273/footer"></script>
+<script type="text/javascript">
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"Ultime modifiche","name":"Nome","error":"Errore","info":"Informazioni","yes":"S\u00ec","no":"No","viewallcourses":"Visualizza tutti i corsi","cancel":"Annulla","morehelp":"Aiuto ulteriore","loadinghelp":"Caricamento in corso...","confirm":"Conferma","areyousure":"Sei sicuro?","closebuttontitle":"Chiudi","unknownerror":"Errore sconosciuto"},"repository":{"type":"Tipo","size":"Dimensione","invalidjson":"Stringa JSON non valida","nofilesattached":"Non sono presenti file allegati","filepicker":"File picker","logout":"Logout","nofilesavailable":"Non sono presenti file","norepositoriesavailable":"Spiacente, nessuno dei repostory disponibili pu\u00f2 restituire file nel formato richiesto.","fileexistsdialogheader":"Il file esiste gi\u00e0","fileexistsdialog_editor":"Un file con lo stesso nome \u00e8 gi\u00e0 stato allegato al testo che stai modificando.","fileexistsdialog_filemanager":"Un file con lo stesso nome \u00e8 gi\u00e0 stato allegato","renameto":"Rinomina in \"{$a}\"","referencesexist":"Sono presenti {$a} alias\/scorciatoie collegate a questo file","select":"Scegli"},"admin":{"confirmdeletecomments":"Stai per eliminare commenti, sei sicuro ?","confirmation":"Conferma"},"block":{"addtodock":"Sposta nel dock","undockitem":"Rimuovi dal dock","dockblock":"Sposta blocco {$a} nel dock","undockblock":"Togli il blocco {$a} dal dock","undockall":"Rimuovi tutto dal dock","hidedockpanel":"Nascondi il pannello dock","hidepanel":"Nascondi pannello"},"langconfig":{"thisdirectionvertical":"btt"}};
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+(function() {Y.use("moodle-core-dock-loader",function() {M.core.dock.loader.initLoader();
+});
+Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\n\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"it"});
+});
+M.util.help_popups.setup(Y);
+Y.use("moodle-core-popuphelp",function() {M.core.init_popuphelp();
+});
+M.util.init_block_hider(Y, {"id":"inst874","title":"Social Network","preference":"block874hidden","tooltipVisible":"Nascondi blocco Social Network","tooltipHidden":"Visualizza blocco Social Network"});
+M.util.init_block_hider(Y, {"id":"inst622","title":"News","preference":"block622hidden","tooltipVisible":"Nascondi blocco News","tooltipHidden":"Visualizza blocco News"});
+M.util.init_block_hider(Y, {"id":"inst612","title":"Messaggi","preference":"block612hidden","tooltipVisible":"Nascondi blocco Messaggi","tooltipHidden":"Visualizza blocco Messaggi"});
+M.util.init_block_hider(Y, {"id":"inst4","title":"Navigazione","preference":"block4hidden","tooltipVisible":"Nascondi blocco Navigazione","tooltipHidden":"Visualizza blocco Navigazione"});
+M.util.init_block_hider(Y, {"id":"inst5","title":"Amministrazione","preference":"block5hidden","tooltipVisible":"Nascondi blocco Amministrazione","tooltipHidden":"Visualizza blocco Amministrazione"});
+M.util.init_block_hider(Y, {"id":"inst624","title":"Categorie di corso","preference":"block624hidden","tooltipVisible":"Nascondi blocco Categorie di corso","tooltipHidden":"Visualizza blocco Categorie di corso"});
+M.util.init_block_hider(Y, {"id":"inst578","title":"Social Thingum","preference":"block578hidden","tooltipVisible":"Nascondi blocco Social Thingum","tooltipHidden":"Visualizza blocco Social Thingum"});
+M.util.init_block_hider(Y, {"id":"inst579","title":"Contacts","preference":"block579hidden","tooltipVisible":"Nascondi blocco Contacts","tooltipHidden":"Visualizza blocco Contacts"});
+ M.util.js_pending('random5d91d2e01890c47'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random5d91d2e01890c47'); });
+})();
+//]]>
+</script>
+
+
+<!--[if lte IE 9]>
+<script src="https://www.whoteach.eu/lms/theme/lambda/javascript/ie/iefix.js"></script>
+<![endif]-->
+
+
+<script>
+jQuery(document).ready(function ($) {
+$('.navbar .dropdown').hover(function() {
+	$(this).addClass('extra-nav-class').find('.dropdown-menu').first().stop(true, true).delay(250).slideDown();
+}, function() {
+	var na = $(this)
+	na.find('.dropdown-menu').first().stop(true, true).delay(100).slideUp('fast', function(){ na.removeClass('extra-nav-class') })
+});
+
+});
+
+jQuery(document).ready(function() {
+    var offset = 220;
+    var duration = 500;
+    jQuery(window).scroll(function() {
+        if (jQuery(this).scrollTop() > offset) {
+            jQuery('.back-to-top').fadeIn(duration);
+        } else {
+            jQuery('.back-to-top').fadeOut(duration);
+        }
+    });
+    
+    jQuery('.back-to-top').click(function(event) {
+        event.preventDefault();
+        jQuery('html, body').animate({scrollTop: 0}, duration);
+        return false;
+    })
+});
+
+/*	jQuery(function(){
+		jQuery('#camera_wrap').camera({
+			fx: 'random',
+			height: 'auto',
+			loader: 'bar',
+			thumbnails: false,
+			pagination: false,
+			autoAdvance: true,
+			hover: false,
+			navigationHover: true,
+			opacityOnGrid: false
+		});
+	});*/
+
+
+</script>
+
+</body>
+</html>

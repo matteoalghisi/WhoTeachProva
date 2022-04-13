@@ -1,0 +1,18 @@
+.progress{
+  background-color: #aaa;
+  border-radius: 10px;
+  height: 30px;
+  width: 100%;
+}
+
+.progress-done{
+
+  background-color: yellow;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  height: 100%;
+  width:0%;
+}

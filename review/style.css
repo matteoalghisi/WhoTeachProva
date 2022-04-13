@@ -1,0 +1,57 @@
+table.hovertable {
+    color:#333333;
+    border-width: 1px;
+    border-color: #999999;
+    border-collapse: collapse;
+                     table-layout: fixed;
+                     width: 70%;
+}
+table.hovertable th {
+        font-family: verdana,arial,sans-serif;
+    font-size:15px;
+    /* IE10 Consumer Preview */
+    background-image: -ms-linear-gradient(bottom, #E3DFD4 0%, #FEFEFF 100%);
+ 
+    /* Mozilla Firefox */
+    background-image: -moz-linear-gradient(bottom, #E3DFD4 0%, #FEFEFF 100%);
+ 
+    /* Opera */
+    background-image: -o-linear-gradient(bottom, #E3DFD4 0%, #FEFEFF 100%);
+ 
+    /* Webkit (Safari/Chrome 10) */
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #E3DFD4), color-stop(1, #FEFEFF));
+ 
+    /* Webkit (Chrome 11+) */
+    background-image: -webkit-linear-gradient(bottom, #E3DFD4 0%, #FEFEFF 100%);
+ 
+    /* W3C Markup, IE10 Release Preview */
+    background-image: linear-gradient(to top, #E3DFD4 0%, #FEFEFF 100%);
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #a9c6c9;
+}
+table.hovertable tr {
+        font-family: verdana,arial,sans-serif;
+    font-size:13px;
+    background-color:#f5fefd;
+}
+table.hovertable td {
+        font-family: verdana,arial,sans-serif;
+    font-size:13px;
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #a9c6c9;
+                     text-align: center;
+}
+ 
+table.assigntable {
+        border: 0;
+}
+table.assigntable td {
+        text-align: center;
+}
+table.assigntable tr {
+        text-align: center;
+}
