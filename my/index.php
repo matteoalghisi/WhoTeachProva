@@ -55,7 +55,7 @@ $strmymoodle = get_string('myhome');
 //testing start
 
 
-echo 'ciaomondo';
+//echo 'ciaomondo';
 
 
 
@@ -84,14 +84,14 @@ if (isguestuser()) {  // Force them to see system default, no editing allowed
 	
 	
 	//testAPRILE
-	if (has_capability('mod/folder:managefiles', $context)) {
+/* 	if (has_capability('mod/folder:managefiles', $context)) {
     echo 'ha folder:managefiles';
 	echo "<br>";
 	echo user_has_role_assignment($USER->id,5);
-	echo "<br>";
+	echo "<br>"; */
 	//echo var_dump($USER);
 	//testAPRILE end
-	} 
+	//} 
 }
 
 // Get the My Moodle page info.  Should always return something unless the database is broken.

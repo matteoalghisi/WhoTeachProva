@@ -1,0 +1,43 @@
+.moodlezoom {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .moodlezoom {
+        padding: 0;
+        margin: 0;
+        display: inline-block;
+        float: left;
+        i {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+        }
+    }
+
+    .moodlezoom i.tofull {
+        display: none;
+    }
+
+    body.zoomin {
+        .moodlezoom {
+            i.tofull {
+                display: block;
+            }
+            i.tosmall {
+                display: none;
+            }
+        }
+
+        #squared-main,
+        #block-region-side-pre {
+            flex-basis: 100%;
+            max-width: 100%;
+            order: unset;
+        }
+        #block-region-side-pre {
+            margin-top: 20px;
+        }
+    }
+}

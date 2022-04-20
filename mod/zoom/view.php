@@ -51,22 +51,26 @@ $event->trigger();
 $PAGE->set_url('/mod/zoom/view.php', array('id' => $cm->id));
 $PAGE->set_title(format_string($zoom->name));
 $PAGE->set_heading(format_string($course->fullname));
+$PAGE->requires->js_call_amd("mod_zoom/toggle_text", 'init');
 
 $zoomuserid = zoom_get_user_id(false);
 $alternativehosts = array();
 if (!is_null($zoom->alternative_hosts)) {
-    $alternativehosts = explode(",", $zoom->alternative_hosts);
+    $alternativehosts = explode(',', str_replace(';', ',', $zoom->alternative_hosts));
 }
 
 $userishost = ($zoomuserid === $zoom->host_id || in_array($USER->email, $alternativehosts));
 
 $service = new mod_zoom_webservice();
+$hostuser = false;
 try {
     $service->get_meeting_webinar_info($zoom->meeting_id, $zoom->webinar);
     $showrecreate = false;
+    $hostuser = $service->get_user($zoom->host_id);
 } catch (moodle_exception $error) {
     $showrecreate = zoom_is_meeting_gone_error($error);
 }
+$meetinginvite = $service->get_meeting_invitation($zoom->meeting_id);
 
 $stryes = get_string('yes');
 $strno = get_string('no');
@@ -84,6 +88,12 @@ $strstartvideopart = get_string('startpartjoins', 'mod_zoom');
 $straudioopt = get_string('option_audio', 'mod_zoom');
 $strstatus = get_string('status', 'mod_zoom');
 $strall = get_string('allmeetings', 'mod_zoom');
+$strwwaitingroom = get_string('waitingroom', 'mod_zoom');
+$strmuteuponentry = get_string('option_mute_upon_entry', 'mod_zoom');
+$strauthenticatedusers = get_string('option_authenticated_users', 'mod_zoom');
+$strhost = get_string('host', 'mod_zoom');
+$strmeetinginvite = get_string('meeting_invite', 'mod_zoom');
+$strmeetinginviteshow = get_string('meeting_invite_show', 'mod_zoom');
 
 // Output starts here.
 echo $OUTPUT->header();
@@ -148,7 +158,7 @@ if ($iszoommanager) {
 // Generate add-to-calendar button if meeting was found and isn't recurring.
 if (!($showrecreate || $zoom->recurring)) {
     $icallink = new moodle_url('/mod/zoom/exportical.php', array('id' => $cm->id));
-    $calendaricon = $OUTPUT->pix_icon('i/calendar', get_string('calendariconalt', 'mod_zoom'), 'mod_zoom');
+    $calendaricon = $OUTPUT->pix_icon('i/calendar', get_string('calendariconalt', 'mod_zoom'));
     $calendarbutton = html_writer::div($calendaricon . ' ' . get_string('downloadical', 'mod_zoom'), 'btn btn-primary');
     $buttonhtml = html_writer::link((string) $icallink, $calendarbutton, array('target' => '_blank'));
     $table->data[] = array(get_string('addtocalendar', 'mod_zoom'), $buttonhtml);
@@ -163,23 +173,35 @@ if ($zoom->recurring) {
     $table->data[] = array($strduration, format_time($zoom->duration));
 }
 
-if (!$zoom->webinar) {
-    $haspassword = (isset($zoom->password) && $zoom->password !== '');
-    $strhaspass = ($haspassword) ? $stryes : $strno;
-    $table->data[] = array($strpassprotect, $strhaspass);
+$haspassword = (isset($zoom->password) && $zoom->password !== '');
+$strhaspass = ($haspassword) ? $stryes : $strno;
+$table->data[] = array($strpassprotect, $strhaspass);
 
-    if ($userishost && $haspassword) {
-        $table->data[] = array($strpassword, $zoom->password);
-    }
+if ($userishost && $haspassword || get_config('mod_zoom', 'displaypassword')) {
+    $table->data[] = array($strpassword, $zoom->password);
 }
 
 if ($userishost) {
     $table->data[] = array($strjoinlink, html_writer::link($zoom->join_url, $zoom->join_url, array('target' => '_blank')));
 }
 
+if ($hostuser) {
+    $hostmoodleuser = new stdClass();
+    $hostmoodleuser->firstname = $hostuser->first_name;
+    $hostmoodleuser->lastname = $hostuser->last_name;
+    $hostmoodleuser->alternatename = '';
+    $hostmoodleuser->firstnamephonetic = '';
+    $hostmoodleuser->lastnamephonetic = '';
+    $hostmoodleuser->middlename = '';
+    $table->data[] = array($strhost, fullname($hostmoodleuser));
+}
+
 if (!$zoom->webinar) {
     $strjbh = ($zoom->option_jbh) ? $stryes : $strno;
     $table->data[] = array($strjoinbeforehost, $strjbh);
+
+    $strwr = ($zoom->option_waiting_room) ? $stryes : $strno;
+    $table->data[] = array($strwwaitingroom, $strwr);
 
     $strvideohost = ($zoom->option_host_video) ? $stryes : $strno;
     $table->data[] = array($strstartvideohost, $strvideohost);
@@ -189,6 +211,8 @@ if (!$zoom->webinar) {
 }
 
 $table->data[] = array($straudioopt, get_string('audio_' . $zoom->option_audio, 'mod_zoom'));
+$table->data[] = array($strmuteuponentry, ($zoom->option_mute_upon_entry) ? $stryes : $strno);
+$table->data[] = array($strauthenticatedusers, ($zoom->option_authenticated_users) ? $stryes : $strno);
 
 if (!$zoom->recurring) {
     if (!$zoom->exists_on_zoom) {
@@ -202,6 +226,15 @@ if (!$zoom->recurring) {
     }
 
     $table->data[] = array($strstatus, $status);
+}
+
+if (!empty($meetinginvite)) {
+    $meetinginvitetext = str_replace("\r\n", '<br/>', $meetinginvite);
+    $showbutton = html_writer::tag('button', $strmeetinginviteshow,
+        array('id' => 'show-more-button', 'class' => 'btn btn-link pt-0 pl-0'));
+    $meetinginvitebody = html_writer::div($meetinginvitetext, '',
+        array('id' => 'show-more-body', 'style' => 'display: none;'));
+    $table->data[] = array($strmeetinginvite, html_writer::div($showbutton . $meetinginvitebody, ''));
 }
 
 $urlall = new moodle_url('/mod/zoom/index.php', array('id' => $course->id));

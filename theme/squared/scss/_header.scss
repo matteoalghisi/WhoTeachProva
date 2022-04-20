@@ -1,0 +1,115 @@
+.headerimages {
+    position: relative;
+    .logo {
+        position: absolute;
+        z-index: 1;
+        .inner {
+            background-color: transparent;
+            height: 124px;
+            width: 124px;
+            margin: 0 auto;
+        }
+    }
+    .background {
+        display: none;
+        .inner {
+            height: 124px;
+        }
+    }
+    .headerbgimg,
+    .logoimg {
+        height: 124px;
+        width: 100%;
+        background-repeat: no-repeat;
+    }
+    .logoimg {
+        background-size: contain;
+        background-position: center center;
+    }
+    .headerbgimg {
+        background-position: right top;
+        background-size: contain;
+        background-color: $sq-green;
+    }
+    .logo {
+        position: relative;
+        &.fixed {
+            position: absolute;
+        }
+        &.left {
+            padding-right: 0;
+        }
+        &.right {
+            padding-left: 0;
+        }
+    }
+    @media(max-width: $screen-breakpoint) {
+        .logo.right {
+            position: absolute;
+            right: 0;
+        }
+    }
+    @media(min-width: $screen-breakpoint) {
+        .logo {
+            .inner {
+                height: 174px;
+                width: auto;
+            }
+        }
+        .background {
+        	display: block;
+            &.grid {
+                padding-left: 0;
+            }
+            &.right {
+                padding-right: 0;
+            }
+            .inner {
+                height: 174px;
+            }
+        }
+        .headerbgimg,
+        .logoimg {
+            height: 174px;
+            width: 100%;
+            background-repeat: no-repeat;
+        }
+        .logoimg {
+            background-size: contain;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .sq-hidden-sm-down {
+        display: none!important;
+    }
+}
+
+@media (max-width: 991px) {
+    .sq-hidden-md-down {
+        display: none!important;
+    }
+}
+
+@media (min-width: 768px) {
+    .sq-hidden-md-up {
+        display: none!important;
+    }
+}
+
+.context-header-settings-menu,
+.region-main-settings-menu {
+    padding: 2px;
+}
+
+.squared-fixed-navbar {
+    padding-top: 50px;
+}
+
+.navbar.position-fixed {
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: $zindex-fixed;
+}

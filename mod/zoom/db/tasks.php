@@ -28,8 +28,8 @@ $tasks = array(
     array(
         'classname' => 'mod_zoom\task\update_meetings',
         'blocking' => 0,
-        'minute' => '0',
-        'hour' => '0',
+        'minute' => '30',
+        'hour' => '*',
         'day' => '*',
         'month' => '*',
         'dayofweek' => '*'
@@ -38,16 +38,7 @@ $tasks = array(
         'classname' => 'mod_zoom\task\get_meeting_reports',
         'blocking' => 0,
         'minute' => '0',
-        'hour' => '0,12',
-        'day' => '*',
-        'dayofweek' => '*',
-        'month' => '*'
-    ),
-    array(
-        'classname' => 'mod_zoom\task\reset_api_calls',
-        'blocking' => 0,
-        'minute' => '59',
-        'hour' => '23',
+        'hour' => '*/6',
         'day' => '*',
         'dayofweek' => '*',
         'month' => '*'

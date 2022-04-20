@@ -10,19 +10,19 @@ cache:
     - $HOME/.npm
 
 php:
- - 7.1
  - 7.2
+ - 7.4
 
 addons:
  firefox: 47.0.1
- postgresql: 9.4
+ postgresql: 9.5
  apt:
    packages:
     - openjdk-8-jre-headless
 
 env:
  global:
-  - MOODLE_BRANCH=MOODLE_38_STABLE
+  - MOODLE_BRANCH=MOODLE_39_STABLE
   - IGNORE_NAMES=mobile_*.mustache # Mobile mustache has specific syntax, ignore their templates
  matrix:
   - DB=pgsql
@@ -30,10 +30,10 @@ env:
 
 before_install:
   - phpenv config-rm xdebug.ini
-  - nvm install 8.9
-  - nvm use 8.9
+  - nvm install 14.0
+  - nvm use 14.0
   - cd ../..
-  - composer create-project -n --no-dev --prefer-dist blackboard-open-source/moodle-plugin-ci ci ^2
+  - composer create-project -n --no-dev --prefer-dist moodlehq/moodle-plugin-ci ci ^3
   - export PATH="$(cd ci/bin; pwd):$(cd ci/vendor/bin; pwd):$PATH"
 
 install:

@@ -91,7 +91,9 @@ if (get_home_page() != HOMEPAGE_SITE) {
 // Trigger event.
 course_view(context_course::instance(SITEID));
 
-echo '<iframe width="600" height="450" src="https://datastudio.google.com/embed/reporting/1fab956f-9199-4f15-8b9c-fefc1c41e860/page/6TNqC" frameborder="0" style="border:0" allowfullscreen></iframe>';
+
+//testdashboard
+//echo '<iframe width="600" height="450" src="https://datastudio.google.com/embed/reporting/1fab956f-9199-4f15-8b9c-fefc1c41e860/page/6TNqC" frameborder="0" style="border:0" allowfullscreen></iframe>';
 
 
 

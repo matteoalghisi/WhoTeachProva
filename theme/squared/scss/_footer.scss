@@ -1,0 +1,39 @@
+#page-footer {
+    color: #848484;
+    float: none;
+    padding-top: 20px;
+    position: relative;
+    text-align: left;
+    width: auto;
+    .logininfo {
+        display: inline;
+        margin: 0;
+        margin: 0 0px;
+        padding: 1em 0;
+    }
+    ul.socialicons {
+        list-style: none;
+        li {
+            display: inline-block;
+            a:hover,
+            a:focus {
+                text-decoration: none;
+            }
+            a.socialicons img {
+                height: 29px;
+                margin: 15px 8px;
+                width: 29px;
+            }
+            &:first-of-type a.socialicons img {
+                margin-left: 0;
+            }
+            &:last-of-type a.socialicons img {
+                margin-right: 0;
+            }
+        }
+    }
+    ul.footerlisting {
+        list-style: none;
+        margin: 0;
+    }
+}

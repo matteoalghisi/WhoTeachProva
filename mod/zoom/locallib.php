@@ -49,6 +49,186 @@ define('ZOOM_MAX_RECORDS_PER_CALL', 300);
 define('ZOOM_USER_TYPE_BASIC', 1);
 define('ZOOM_USER_TYPE_PRO', 2);
 define('ZOOM_USER_TYPE_CORP', 3);
+define('ZOOM_MEETING_NOT_FOUND_ERROR_CODE', 3001);
+define('ZOOM_USER_NOT_FOUND_ERROR_CODE', 1001);
+define('ZOOM_INVALID_USER_ERROR_CODE', 1120);
+
+/**
+ * Entry not found on Zoom.
+ *
+ * @copyright  2020 UC Regents
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+class zoom_not_found_exception extends moodle_exception {
+    /**
+     * Web service response.
+     * @var string
+     */
+    public $response = null;
+
+    /**
+     * Constructor
+     * @param string $response      Web service response message
+     * @param int $errorcode     Web service response error code
+     */
+    public function __construct($response, $errorcode) {
+        $this->response = $response;
+        $this->zoomerrorcode = $errorcode;
+        parent::__construct('errorwebservice_notfound', 'zoom');
+    }
+}
+
+/**
+ * Bad request received by Zoom.
+ *
+ * @copyright  2020 UC Regents
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+class zoom_bad_request_exception extends moodle_exception {
+    /**
+     * Web service response.
+     * @var string
+     */
+    public $response = null;
+
+    /**
+     * Constructor
+     * @param string $response      Web service response message
+     * @param int $errorcode     Web service response error code
+     */
+    public function __construct($response, $errorcode) {
+        $this->response = $response;
+        $this->zoomerrorcode = $errorcode;
+        parent::__construct('errorwebservice_badrequest', 'zoom', '', $response);
+    }
+}
+
+/**
+ * Couldn't succeed within the allowed number of retries.
+ *
+ * @copyright  2020 UC Regents
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+class zoom_api_retry_failed_exception extends moodle_exception {
+    /**
+     * Web service response.
+     * @var string
+     */
+    public $response = null;
+
+    /**
+     * Constructor
+     * @param string $response      Web service response
+     * @param int $errorcode     Web service response error code
+     */
+    public function __construct($response, $errorcode) {
+        $this->response = $response;
+        $this->zoomerrorcode = $errorcode;
+        $a = new stdClass();
+        $a->response = $response;
+        $a->maxretries = mod_zoom_webservice::MAX_RETRIES;
+        parent::__construct('zoomerr_maxretries', 'zoom', '', $a);
+    }
+}
+
+/**
+ * Exceeded daily API limit.
+ *
+ * @copyright  2020 UC Regents
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+class zoom_api_limit_exception extends moodle_exception {
+    /**
+     * Web service response.
+     * @var string
+     */
+    public $response = null;
+
+    /**
+     * Unix timestamp of next time to API can be called.
+     * @var int
+     */
+    public $retryafter = null;
+
+    /**
+     * Constructor
+     * @param string $response  Web service response
+     * @param int $errorcode    Web service response error code
+     * @param int $retryafter   Unix timestamp of next time to API can be called.
+     */
+    public function __construct($response, $errorcode, $retryafter) {
+        $this->response = $response;
+        $this->zoomerrorcode = $errorcode;
+        $this->retryafter = $retryafter;
+        $a = new stdClass();
+        $a->response = $response;
+        parent::__construct('zoomerr_apilimit', 'zoom', '',
+                userdate($retryafter, get_string('strftimedaydatetime', 'core_langconfig')));
+    }
+}
+
+/**
+ * Terminate the current script with a fatal error.
+ *
+ * Adapted from core_renderer's fatal_error() method. Needed because throwing errors with HTML links in them will convert links
+ * to text using htmlentities. See MDL-66161 - Reflected XSS possible from some fatal error messages.
+ *
+ * So need custom error handler for fatal Zoom errors that have links to help people.
+ *
+ * @param string $errorcode The name of the string from error.php to print
+ * @param string $module name of module
+ * @param string $continuelink The url where the user will be prompted to continue.
+ *                             If no url is provided the user will be directed to
+ *                             the site index page.
+ * @param mixed $a Extra words and phrases that might be required in the error string
+ */
+function zoom_fatal_error($errorcode, $module='', $continuelink='', $a=null) {
+    global $CFG, $COURSE, $OUTPUT, $PAGE;
+
+    $output = '';
+    $obbuffer = '';
+
+    // Assumes that function is run before output is generated.
+    if ($OUTPUT->has_started()) {
+        // If not then have to default to standard error.
+        throw new moodle_exception($errorcode, $module, $continuelink, $a);
+    }
+
+    $PAGE->set_heading($COURSE->fullname);
+    $output .= $OUTPUT->header();
+
+    // Output message without messing with HTML content of error.
+    $message = '<p class="errormessage">' . get_string($errorcode, $module, $a) . '</p>';
+
+    $output .= $OUTPUT->box($message, 'errorbox alert alert-danger', null, array('data-rel' => 'fatalerror'));
+
+    if ($CFG->debugdeveloper) {
+        if (!empty($debuginfo)) {
+            $debuginfo = s($debuginfo); // Removes all nasty JS.
+            $debuginfo = str_replace("\n", '<br />', $debuginfo); // Keep newlines.
+            $output .= $OUTPUT->notification('<strong>Debug info:</strong> '.$debuginfo, 'notifytiny');
+        }
+        if (!empty($backtrace)) {
+            $output .= $OUTPUT->notification('<strong>Stack trace:</strong> '.format_backtrace($backtrace), 'notifytiny');
+        }
+        if ($obbuffer !== '' ) {
+            $output .= $OUTPUT->notification('<strong>Output buffer:</strong> '.s($obbuffer), 'notifytiny');
+        }
+    }
+
+    if (!empty($continuelink)) {
+        $output .= $OUTPUT->continue_button($continuelink);
+    }
+
+    $output .= $OUTPUT->footer();
+
+    // Padding to encourage IE to display our error page, rather than its own.
+    $output .= str_repeat(' ', 512);
+
+    echo $output;
+
+    exit(1); // General error code.
+}
 
 /**
  * Get course/cm/zoom objects from url parameters, and check for login/permissions.
@@ -85,14 +265,12 @@ function zoom_get_instance_setup() {
  * Retrieves information for a meeting.
  *
  * @param int $meetingid
- * @param bool $webinar
- * @param string $hostid the host's uuid
  * @return array information about the meeting
  */
-function zoom_get_sessions_for_display($meetingid, $webinar, $hostid) {
+function zoom_get_sessions_for_display($meetingid) {
     require_once(__DIR__.'/../../lib/moodlelib.php');
     global $DB;
-    $service = new mod_zoom_webservice();
+
     $sessions = array();
     $format = get_string('strftimedatetimeshort', 'langconfig');
 
@@ -103,7 +281,36 @@ function zoom_get_sessions_for_display($meetingid, $webinar, $hostid) {
         $uuid = $instance->uuid;
         $participantlist = zoom_get_participants_report($instance->id);
         $sessions[$uuid]['participants'] = $participantlist;
-        $sessions[$uuid]['count'] = count($participantlist);
+
+        $uniquevalues = [];
+        $uniqueparticipantcount = 0;
+        foreach ($participantlist as $participant) {
+            $unique = true;
+            if ($participant->uuid != null) {
+                if (array_key_exists($participant->uuid, $uniquevalues)) {
+                    $unique = false;
+                } else {
+                    $uniquevalues[$participant->uuid] = true;
+                }
+            }
+            if ($participant->userid != null) {
+                if (!$unique || !array_key_exists($participant->userid, $uniquevalues)) {
+                    $uniquevalues[$participant->userid] = true;
+                } else {
+                    $unique = false;
+                }
+            }
+            if ($participant->user_email != null) {
+                if (!$unique || !array_key_exists($participant->user_email, $uniquevalues)) {
+                    $uniquevalues[$participant->user_email] = true;
+                } else {
+                    $unique = false;
+                }
+            }
+            $uniqueparticipantcount += $unique ? 1 : 0;
+        }
+
+        $sessions[$uuid]['count'] = $uniqueparticipantcount;
         $sessions[$uuid]['topic'] = $instance->topic;
         $sessions[$uuid]['duration'] = $instance->duration;
         $sessions[$uuid]['starttime'] = userdate($instance->start_time, $format);
@@ -167,23 +374,22 @@ function zoom_get_user_id($required = true) {
 /**
  * Check if the error indicates that a meeting is gone.
  *
- * @param string $error
+ * @param moodle_exception $error
  * @return bool
  */
 function zoom_is_meeting_gone_error($error) {
     // If the meeting's owner/user cannot be found, we consider the meeting to be gone.
-    return strpos($error, 'not found') !== false || zoom_is_user_not_found_error($error);
+    return ($error->zoomerrorcode === ZOOM_MEETING_NOT_FOUND_ERROR_CODE) || zoom_is_user_not_found_error($error);
 }
 
 /**
  * Check if the error indicates that a user is not found or does not belong to the current account.
  *
- * @param string $error
+ * @param moodle_exception $error
  * @return bool
  */
 function zoom_is_user_not_found_error($error) {
-    return strpos($error, 'not exist') !== false || strpos($error, 'not belong to this account') !== false
-        || strpos($error, 'not found on this account') !== false;
+    return ($error->zoomerrorcode === ZOOM_USER_NOT_FOUND_ERROR_CODE) || ($error->zoomerrorcode === ZOOM_INVALID_USER_ERROR_CODE);
 }
 
 /**
@@ -212,7 +418,6 @@ function zoom_meetingnotfound_param($cmid) {
  */
 function zoom_get_participants_report($detailsid) {
     global $DB;
-    $service = new mod_zoom_webservice();
     $sql = 'SELECT zmp.id,
                    zmp.name,
                    zmp.userid,
@@ -220,7 +425,6 @@ function zoom_get_participants_report($detailsid) {
                    zmp.join_time,
                    zmp.leave_time,
                    zmp.duration,
-                   zmp.attentiveness_score,
                    zmp.uuid
               FROM {zoom_meeting_participants} zmp
              WHERE zmp.detailsid = :detailsid

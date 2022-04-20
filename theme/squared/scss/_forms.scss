@@ -1,0 +1,47 @@
+.mform fieldset.collapsible legend a.fheader {
+    margin-left: 0;
+}
+
+
+.path-mod-lesson .answeroption .fcheckbox input, .path-mod-lesson .answeroptiongroup input {
+    margin: 4px 4px;
+    display: inline-block;
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    float: left;
+}
+
+.path-mod-lesson .answeroption .fcheckbox label, .path-mod-lesson .mform .fitem.answeroptiongroup fieldset.fgroup label {
+    padding: 0 20px 0 0;
+    float: left;
+}
+
+.label {
+    color: #333;
+}
+
+.sqformelement {
+    border-color: #a9a9a9;
+    border-style: solid;
+    border-width: 1px;
+    display: block;
+    margin: 0 auto;
+}
+
+.sqinput {
+    padding: .375rem .75rem;
+}
+
+@media(min-width: map-get($grid-breakpoints, "md")) {
+    .sqscat {
+        float: left;
+    }
+}
+
+@media(min-width: map-get($grid-breakpoints, "lg")) {
+    .sqssort {
+        float: right;
+     }
+}

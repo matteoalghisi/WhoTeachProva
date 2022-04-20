@@ -47,26 +47,24 @@ class provider implements
     /**
      * Returns meta data about this system.
      *
-     * @param   collection $collection The collection to add metadata to.
+     * @param   collection $coll The collection to add metadata to.
      * @return  collection  The array of metadata
      */
-    public static function get_metadata(\core_privacy\local\metadata\collection $collection):
-        \core_privacy\local\metadata\collection {
+    public static function get_metadata(\core_privacy\local\metadata\collection $coll): \core_privacy\local\metadata\collection {
         // Add all user data fields to the collection.
 
-        $collection->add_database_table('zoom_meeting_participants', [
+        $coll->add_database_table('zoom_meeting_participants', [
             'name' => 'privacy:metadata:zoom_meeting_participants:name',
             'user_email' => 'privacy:metadata:zoom_meeting_participants:user_email',
             'join_time' => 'privacy:metadata:zoom_meeting_participants:join_time',
             'leave_time' => 'privacy:metadata:zoom_meeting_participants:leave_time',
-            'duration' => 'privacy:metadata:zoom_meeting_participants:duration',
-            'attentiveness_score' => 'privacy:metadata:zoom_meeting_participants:attentiveness_score'
+            'duration' => 'privacy:metadata:zoom_meeting_participants:duration'
         ], 'privacy:metadata:zoom_meeting_participants');
 
-        $collection->add_database_table('zoom_meeting_details',
+        $coll->add_database_table('zoom_meeting_details',
                                         ['topic' => 'privacy:metadata:zoom_meeting_details:topic'],
                                         'privacy:metadata:zoom_meeting_details');
-        return $collection;
+        return $coll;
     }
 
     /**
@@ -109,7 +107,7 @@ class provider implements
     public static function get_users_in_context(\core_privacy\local\request\userlist $userlist) {
         $context = $userlist->get_context();
 
-        if (!is_a($context, \context_module::class)) {
+        if (!($context instanceof \context_module)) {
             return;
         }
 
@@ -153,7 +151,6 @@ class provider implements
                        zmp.join_time,
                        zmp.leave_time,
                        zmp.duration,
-                       zmp.attentiveness_score,
                        cm.id AS cmid
                   FROM {context} c
             INNER JOIN {course_modules} cm ON cm.id = c.instanceid AND c.contextlevel = :contextlevel
@@ -183,8 +180,7 @@ class provider implements
                 'user_email' => $participantinstance->user_email,
                 'join_time' => \core_privacy\local\request\transform::datetime($participantinstance->join_time),
                 'leave_time' => \core_privacy\local\request\transform::datetime($participantinstance->leave_time),
-                'duration' => $participantinstance->duration,
-                'attentiveness_score' => $participantinstance->attentiveness_score
+                'duration' => $participantinstance->duration
             ];
 
             $contextdata = (object) array_merge((array) $contextdata, $instancedata);
@@ -254,7 +250,7 @@ class provider implements
         global $DB;
         $context = $userlist->get_context();
 
-        if (!is_a($context, \context_module::class)) {
+        if (!($context instanceof \context_module)) {
             return;
         }
 

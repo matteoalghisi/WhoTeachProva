@@ -1,0 +1,95 @@
+    {{!
+    This file is part of the Squared theme for Moodle
+}}
+{{!
+    @template theme_squared/blocks
+
+    Render the one column block layout
+
+    Example context (json): {
+        "pairs" : { "pair1" : { 
+                        "blocka" : {"class" : "block-settings",
+                                    "blockinstanceid": 1},
+                        "blockb" : {"class" : "block-navigation",
+                                    "blockinstanceid": 2}
+                    }
+                    "pair2" : {
+                        "blocka" : {},
+                        "blockb" : {}
+                    }
+        }
+    }
+}}
+<div class="two-rows" id="accordion" role="tablist" aria-multiselectable="true">
+    {{#pairs}}
+    <div class="row blockpairs">
+        {{#blocka}}
+        <div class="{{class}} pairheader left">
+            <div role="button" data-toggle="collapse" 
+                data-target="#subcollapse{{blockinstanceid}}" aria-expanded="false" aria-controls="inst{{blockinstanceid}}" class="{{shape}} blockheader over-hover-to-bottom {{name}}">
+                <div class="blockhead title">
+                    <div class="alignself">
+                        <div class="inner">
+                            <div class="courseblock-icon"></div>
+                            <div class="blocktitle">
+                                {{{title}}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/blocka}}
+        {{#blockb}}
+        <div class="{{class}} pairheader right">
+            <div role="button" data-toggle="collapse" 
+                    data-target="#subcollapse{{blockinstanceid}}" aria-expanded="false" aria-controls="inst{{blockinstanceid}}" class="{{shape}} blockheader over-hover-to-bottom {{name}}">
+                <div class="blockhead">
+                    <div class="alignself">
+                        <div class="inner">
+                            <div class="courseblock-icon"></div>
+                            <div class="blocktitle">
+                                {{{title}}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/blockb}}
+    </div>
+    {{#blocka}}
+        {{#blockinstanceid}}
+        <div {{#atts}} {{key}} = "{{value}}" {{/atts}}>
+            <div class="card-heading dropdown-menu-left">
+                {{{header}}}
+            </div>
+            <div id="subcollapse{{blockinstanceid}}" class="card-body p-0 m-0 block collapse {{#subopen}}in{{/subopen}}" data-parent="#accordion">
+                {{{content}}}
+            </div>
+        </div>
+        <a href="#sb-{{skipid}}" class="skip-block"> {{#str}} skipa, access, {{skiptitle}} {{/str}} </a>
+        {{/blockinstanceid}}
+        {{#movetarget}}
+            {{{movetarget}}}
+        {{/movetarget}}
+    {{/blocka}}
+
+    {{#blockb}}
+        {{#blockinstanceid}}
+        <div {{#atts}} {{key}} = "{{value}}" {{/atts}}>
+            <div class="card-heading dropdown-menu-left">
+                {{{header}}}
+            </div>
+            <div id="subcollapse{{blockinstanceid}}" class="card-body p-0 m-0 block collapse {{#subopen}}in{{/subopen}}" data-parent="#accordion">
+                {{{content}}}
+            </div>
+        </div>
+        <a href="#sb-{{skipid}}" class="skip-block"> {{#str}} skipa, access, {{skiptitle}} {{/str}} </a>
+        {{/blockinstanceid}}
+        {{#movetarget}}
+            {{{movetarget}}}
+        {{/movetarget}}
+    {{/blockb}}
+    {{/pairs}}
+</div>
